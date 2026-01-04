@@ -1,0 +1,68 @@
+{
+  "name": "CORVICAC - Corporación de Afrocolombianos y Mestizos Víctimas del Conflicto Armado Interno Colombiano",
+  "short_name": "CORVICAC",
+  "description": "CORVICAC proporciona asistencia humanitaria, apoyo fiscal y reparación a víctimas del conflicto armado en Colombia. Trabajamos por la justicia, paz y reintegración social de comunidades afectadas por la violencia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1E7F43",
+  "theme_color": "#1E7F43",
+  "orientation": "portrait-primary",
+  "lang": "es-CO",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["nonprofit", "humanitarian", "social"],
+  "shortcuts": [
+    {
+      "name": "Donar",
+      "short_name": "Donar",
+      "description": "Realiza una donación para apoyar a las víctimas del conflicto armado",
+      "url": "/donate",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Voluntariado",
+      "short_name": "Voluntariado",
+      "description": "Únete como voluntario para apoyar nuestras causas",
+      "url": "/volunteer",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Proyectos",
+      "short_name": "Proyectos",
+      "description": "Conoce nuestros proyectos de ayuda a víctimas del conflicto",
+      "url": "/projects",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Página principal de CORVICAC en escritorio"
+    },
+    {
+      "src": "/screenshots/mobile-home.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Página principal de CORVICAC en móvil"
+    }
+  ]
+}

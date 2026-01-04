@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Página de inicio -->
+  <url>
+    <loc>https://corvicac.org/es</loc>
+    <lastmod>2025-12-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corvicac.org/es" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://corvicac.org/en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corvicac.org/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://corvicac.org/de" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://corvicac.org/pt" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://corvicac.org/it" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corvicac.org/ar" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://corvicac.org/zh" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corvicac.org/ja" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://corvicac.org/ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corvicac.org/es" />
+  </url>
+
+  <!-- Página de nosotros -->
+  <url>
+    <loc>https://corvicac.org/es/nosotros</loc>
+    <lastmod>2025-12-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corvicac.org/es/nosotros" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://corvicac.org/en/nosotros" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corvicac.org/fr/nosotros" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://corvicac.org/de/nosotros" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://corvicac.org/pt/nosotros" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://corvicac.org/it/nosotros" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corvicac.org/ar/nosotros" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://corvicac.org/zh/nosotros" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corvicac.org/ja/nosotros" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://corvicac.org/ru/nosotros" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corvicac.org/es/nosotros" />
+  </url>
+
+  <!-- Página de eventos -->
+  <url>
+    <loc>https://corvicac.org/es/eventos</loc>
+    <lastmod>2025-12-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corvicac.org/es/eventos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://corvicac.org/en/eventos" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corvicac.org/fr/eventos" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://corvicac.org/de/eventos" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://corvicac.org/pt/eventos" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://corvicac.org/it/eventos" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corvicac.org/ar/eventos" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://corvicac.org/zh/eventos" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corvicac.org/ja/eventos" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://corvicac.org/ru/eventos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corvicac.org/es/eventos" />
+  </url>
+
+  <!-- Página de programas -->
+  <url>
+    <loc>https://corvicac.org/es/programas</loc>
+    <lastmod>2025-12-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corvicac.org/es/programas" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://corvicac.org/en/programas" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corvicac.org/fr/programas" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://corvicac.org/de/programas" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://corvicac.org/pt/programas" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://corvicac.org/it/programas" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corvicac.org/ar/programas" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://corvicac.org/zh/programas" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corvicac.org/ja/programas" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://corvicac.org/ru/programas" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corvicac.org/es/programas" />
+  </url>
+
+  <!-- Página de apoyar -->
+  <url>
+    <loc>https://corvicac.org/es/apoyar</loc>
+    <lastmod>2025-12-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corvicac.org/es/apoyar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://corvicac.org/en/apoyar" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corvicac.org/fr/apoyar" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://corvicac.org/de/apoyar" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://corvicac.org/pt/apoyar" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://corvicac.org/it/apoyar" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corvicac.org/ar/apoyar" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://corvicac.org/zh/apoyar" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corvicac.org/ja/apoyar" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://corvicac.org/ru/apoyar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corvicac.org/es/apoyar" />
+  </url>
+
+  <!-- Página de términos y condiciones -->
+  <url>
+    <loc>https://corvicac.org/es/terminos-y-condiciones</loc>
+    <lastmod>2025-12-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://corvicac.org/es/terminos-y-condiciones" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://corvicac.org/en/terminos-y-condiciones" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://corvicac.org/fr/terminos-y-condiciones" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://corvicac.org/de/terminos-y-condiciones" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://corvicac.org/pt/terminos-y-condiciones" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://corvicac.org/it/terminos-y-condiciones" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://corvicac.org/ar/terminos-y-condiciones" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://corvicac.org/zh/terminos-y-condiciones" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://corvicac.org/ja/terminos-y-condiciones" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://corvicac.org/ru/terminos-y-condiciones" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://corvicac.org/es/terminos-y-condiciones" />
+  </url>
+
+</urlset>

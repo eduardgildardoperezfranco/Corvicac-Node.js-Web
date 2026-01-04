@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Formulario de Patrocinio - CORVICAC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .required {
+            color: red;
+        }
+        .btn {
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #5a6fd8;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Prueba de Formulario de Patrocinio</h1>
+        
+        <form id="sponsorshipForm">
+            <div class="form-group">
+                <label>Nombre Completo <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required placeholder="Ej: María Fernanda Gómez Pérez">
+            </div>
+
+            <div class="form-group">
+                <label>Empresa/Organización</label>
+                <input type="text" id="company" name="company" placeholder="Ej: Soluciones Empresariales S.A.">
+            </div>
+
+            <div class="form-group">
+                <label>Correo Electrónico <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="su@email.com">
+            </div>
+
+            <div class="form-group">
+                <label>Teléfono de Contacto <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" required placeholder="+57 300 123 4567">
+            </div>
+
+            <div class="form-group">
+                <label>Número de Identificación Fiscal <span class="required">*</span></label>
+                <input type="text" id="taxId" name="taxId" required placeholder="Ej: NIT, RFC, SSN">
+            </div>
+
+            <div class="form-group">
+                <label>País de Residencia Fiscal <span class="required">*</span></label>
+                <select id="country" name="country" required>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Estados Unidos">Estados Unidos</option>
+                    <option value="Canadá">Canadá</option>
+                    <option value="Reino Unido">Reino Unido</option>
+                    <option value="Alemania">Alemania</option>
+                    <option value="España">España</option>
+                    <option value="México">México</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Dirección Fiscal Completa <span class="required">*</span></label>
+                <input type="text" id="address" name="address" required placeholder="Calle, Ciudad, Estado, País">
+            </div>
+
+            <div class="form-group">
+                <label>Monto de Patrocinio (COP)</label>
+                <input type="number" id="amount" name="amount" value="10000000" min="5000000" placeholder="Digite su aporte">
+            </div>
+
+            <div class="form-group">
+                <label>Forma de Contacto Preferida</label>
+                <select id="preferredContact" name="preferredContact">
+                    <option value="email">Correo Electrónico</option>
+                    <option value="phone">Teléfono</option>
+                    <option value="whatsapp">WhatsApp</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Mensaje Específico o Proyecto de Interés</label>
+                <textarea id="message" name="message" placeholder="¿Algún proyecto específico que le gustaría apoyar?"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    Recibir novedades y boletines informativos
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="terms" name="terms" required>
+                    Acepto los términos y condiciones <span class="required">*</span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn">🚀 Enviar Solicitud de Prueba</button>
+        </form>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('sponsorshipForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'info result';
+            resultDiv.innerHTML = '📤 Enviando solicitud de patrocinio...';
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                company: document.getElementById('company').value,
+                message: document.getElementById('message').value,
+                taxId: document.getElementById('taxId').value,
+                address: document.getElementById('address').value,
+                preferredContact: document.getElementById('preferredContact').value,
+                newsletter: document.getElementById('newsletter').checked,
+                termsAccepted: document.getElementById('terms').checked,
+                amount: parseInt(document.getElementById('amount').value) || 10000000,
+                currency: 'COP',
+                country: document.getElementById('country').value,
+                tier: 'test'
+            };
+
+            try {
+                const response = await fetch('/api/sponsorship', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    resultDiv.className = 'success result';
+                    resultDiv.innerHTML = `
+                        <h3>✅ ¡Éxito!</h3>
+                        <p><strong>Nombre:</strong> ${data.data.name}</p>
+                        <p><strong>Monto:</strong> ${data.data.amount.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</p>
+                        <p><strong>Email:</strong> ${data.data.email}</p>
+                        <p>${data.message}</p>
+                        <p><em>Revisa la consola del servidor para ver los detalles del correo</em></p>
+                    `;
+                } else {
+                    resultDiv.className = 'error result';
+                    resultDiv.innerHTML = `
+                        <h3>❌ Error</h3>
+                        <p>${data.message}</p>
+                    `;
+                }
+            } catch (error) {
+                resultDiv.className = 'error result';
+                resultDiv.innerHTML = `
+                    <h3>❌ Error de Conexión</h3>
+                    <p>${error.message}</p>
+                    <p><em>Verifica que el servidor esté corriendo en http://localhost:3001</em></p>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

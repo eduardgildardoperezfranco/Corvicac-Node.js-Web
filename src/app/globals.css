@@ -1,26 +1,309 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary-green: #1E7F43;
+  --color-primary-deep: #145A32;
+  --color-primary-gold: #D4AF37;
+  --color-primary-brown: #6E4B3A;
+  --color-primary-black: #1C1C1C;
+  --color-primary-white: #FFFFFF;
+
+  --color-secondary-soft-gray: #F4F6F5;
+  --color-secondary-warm-gray: #DADDD8;
+  --color-secondary-yellow: #F2C94C;
+  --color-secondary-blue: #2F80ED;
+  --color-flag-yellow: #FFFF00;
+
+  --font-sans: var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-heading: var(--font-poppins), system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+
+  /* Accessibility and performance variables */
+  --focus-ring-color: #1E7F43;
+  --focus-ring-width: 3px;
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Dark mode support */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f172a;
+    --foreground: #e5e7eb;
+    --muted-foreground: #9ca3af;
+    --card: #111827;
+    --card-foreground: #e5e7eb;
+    --border: #1f2937;
+    --input: #1f2937;
+    --ring: #1E7F43;
   }
+}
+
+/* Light mode (default) */
+:root {
+  --background: #FFFFFF;
+  --foreground: #1C1C1C;
+  --muted-foreground: #6b7280;
+  --card: #FFFFFF;
+  --card-foreground: #1C1C1C;
+  --border: #e5e7eb;
+  --input: #f3f4f6;
+  --ring: #1E7F43;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --border: #000000;
+    --input: #ffffff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #666;
+  }
+}
+
+/* Base styles with accessibility in mind */
+:root {
+  color-scheme: light dark;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus styles for better accessibility */
+:root:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Improve focus visibility */
+* {
+  outline-color: var(--focus-ring-color);
+}
+
+/* Skip link for keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--color-primary-green);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Improve touch targets on mobile */
+button,
+a,
+input,
+select,
+textarea {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Better text selection */
+::selection {
+  background: rgba(30, 127, 67, 0.2);
+}
+
+/* Improve image loading */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Better form controls */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Improve button accessibility */
+button {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Better link styles */
+a {
+  text-decoration-skip-ink: auto;
+  background-image: linear-gradient(transparent, transparent);
+  transition: background-size var(--transition-normal);
+}
+
+a:hover {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(180deg, transparent 90%, var(--color-primary-green) 90%);
+  background-size: 100% 100%, 100% 3px;
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
+}
+
+/* Improve heading hierarchy */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+/* Better spacing */
+p {
+  margin-bottom: 1em;
+}
+
+/* Improve list accessibility */
+ul,
+ol {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+/* Better table styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 0.75em;
+  text-align: left;
+}
+
+/* Improve code blocks */
+code,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+pre {
+  background: var(--input);
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+/* Better blockquotes */
+blockquote {
+  border-left: 4px solid var(--color-primary-green);
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  background: var(--input);
+  border-radius: 4px;
+}
+
+/* Improve HR styles */
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2em 0;
+}
+
+/* Better figure styles */
+figure {
+  margin: 1em 0;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: var(--muted-foreground);
+  margin-top: 0.5em;
+}
+
+/* Improve container accessibility */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Better loading states */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Improve error states */
+.error {
+  border: 2px solid #ef4444;
+  background-color: #fef2f2;
+  color: #991b1b;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Success states */
+.success {
+  border: 2px solid #10b981;
+  background-color: #f0fdf4;
+  color: #065f46;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Warning states */
+.warning {
+  border: 2px solid #f59e0b;
+  background-color: #fff7ed;
+  color: #9a3412;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Info states */
+.info {
+  border: 2px solid #3b82f6;
+  background-color: #eff6ff;
+  color: #1e3a8a;
+  padding: 1rem;
+  border-radius: 8px;
 }

@@ -1,0 +1,124 @@
+# Robots.txt for CORVICAC Multilingual Website
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://corvicac.org/sitemap.xml
+
+# Language-specific sitemaps
+Sitemap: https://corvicac.org/sitemap-es.xml
+Sitemap: https://corvicac.org/sitemap-en.xml
+Sitemap: https://corvicac.org/sitemap-fr.xml
+Sitemap: https://corvicac.org/sitemap-de.xml
+Sitemap: https://corvicac.org/sitemap-pt.xml
+Sitemap: https://corvicac.org/sitemap-it.xml
+Sitemap: https://corvicac.org/sitemap-ar.xml
+Sitemap: https://corvicac.org/sitemap-zh.xml
+Sitemap: https://corvicac.org/sitemap-ja.xml
+Sitemap: https://corvicac.org/sitemap-ru.xml
+
+# Crawl delay to be respectful
+Crawl-delay: 1
+
+# Allow all bots to index all content
+Allow: /$
+
+# Disallow crawling of admin and system paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+
+# Allow language-specific paths
+Allow: /es/
+Allow: /en/
+Allow: /fr/
+Allow: /de/
+Allow: /pt/
+Allow: /it/
+Allow: /ar/
+Allow: /zh/
+Allow: /ja/
+Allow: /ru/
+
+# Google AdsBot - allow crawling for ad verification
+User-agent: AdsBot-Google
+Allow: /
+
+# Google AdsBot-Mobile - allow crawling for mobile ad verification
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+# Bing bot - allow crawling
+User-agent: bingbot
+Allow: /
+
+# Yandex bot - allow crawling
+User-agent: Yandex
+Allow: /
+
+# Baidu bot - allow crawling
+User-agent: Baiduspider
+Allow: /
+
+# Facebook crawler - allow for social sharing
+User-agent: facebookexternalhit
+Allow: /
+
+# Twitter crawler - allow for social sharing
+User-agent: Twitterbot
+Allow: /
+
+# LinkedIn crawler - allow for social sharing
+User-agent: LinkedInBot
+Allow: /
+
+# WhatsApp crawler - allow for social sharing
+User-agent: WhatsApp
+Allow: /
+
+# Telegram bot - allow for social sharing
+User-agent: TelegramBot
+Allow: /
+
+# Pinterest bot - allow for social sharing
+User-agent: Pinterest
+Allow: /
+
+# Instagram bot - allow for social sharing
+User-agent: Applebot-Extended
+Allow: /
+
+# Discord bot - allow for social sharing
+User-agent: Discordbot
+Allow: /
+
+# Slack bot - allow for social sharing
+User-agent: Slackbot
+Allow: /
+
+# Reddit bot - allow for social sharing
+User-agent: redditbot
+Allow: /
+
+# WhatsApp Business API crawler
+User-agent: WhatsAppBot
+Allow: /
+
+# Google Search Console verification
+User-agent: Googlebot
+Allow: /googlee1234567890.html
+
+# Bing Webmaster Tools verification
+User-agent: Bingbot
+Allow: /binge1234567890.html
+
+# Yandex Webmaster verification
+User-agent: Yandex
+Allow: /yandex-verification.html
+
+# Baidu Webmaster verification
+User-agent: Baiduspider
+Allow: /baidu-verification.html
