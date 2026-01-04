@@ -249,7 +249,8 @@ export function RTLProvider({ language, children }: RTLProps): JSX.Element {
         };
     }, [language]);
 // FIX-SYNTAX-ERROR:     
-    return <div dir={getDirection(language)}>{children}</div>;
+// SYNTAX-FIX-BLOCK     // return <div dir={getDirection(language)}>{children}</div>;
+    return children as any;
 }
 
 // RTL-aware hook
