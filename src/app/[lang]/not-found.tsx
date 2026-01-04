@@ -28,11 +28,11 @@ export default function NotFound() {
                     </h1>
                     
                     <h2 className="text-2xl font-bold text-white mb-8">
-                        {t('errors').notFound}
+                        {t('errors').notFound as string}
                     </h2>
                     
                     <p className="text-white/90 text-lg mb-12 max-w-2xl mx-auto">
-                        {t('errors').general} {t('errors').notFound}. {t('common').back}
+                        {t('errors').general} {t('errors').notFound as string}. {t('common').back}
                     </p>
                     
                     <div className="space-y-4">
