@@ -63,4 +63,4 @@ const nextConfig = {
   // Note: NODE_ENV is handled by Next.js automatically, removed from env
 };
 
-module.exports = nextConfig;
+export default nextConfig;
