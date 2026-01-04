@@ -13,7 +13,7 @@ export default function AccessibilityGuide() {
 
     useEffect(() => {
         // Track page view
-        analytics.trackPageView('/accessibility-guide', 'Guía de Accesibilidad');
+        analytics.trackPageView();
         
         // Track accessibility guide visit
         analytics.trackEvent('accessibility_guide', {
