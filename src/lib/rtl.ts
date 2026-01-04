@@ -1,4 +1,5 @@
 // RTL (Right-to-Left) Support System for CORVICAC Multilingual Website
+import { useEffect } from 'react';
 
 export type LanguageDirection = 'ltr' | 'rtl';
 
@@ -247,7 +248,7 @@ export function RTLProvider({ language, children }: RTLProps): JSX.Element {
             window.removeEventListener('languagechange', handleLanguageChange);
         };
     }, [language]);
-    
+// FIX-SYNTAX-ERROR:     
     return <div dir={getDirection(language)}>{children}</div>;
 }
 

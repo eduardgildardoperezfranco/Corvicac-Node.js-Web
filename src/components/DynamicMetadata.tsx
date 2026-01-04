@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { useTranslations, getOgLocale, getCurrentLanguage } from '@/lib/i18n';
 import { analytics } from '@/lib/analytics';
+const analyticsAny = analytics as any;
 
 export default function DynamicMetadata() {
     const { t } = useTranslations();
@@ -80,7 +81,7 @@ export default function DynamicMetadata() {
         document.head.appendChild(defaultLink);
         
         // Track language change in analytics
-        analytics.track('language_changed', {
+        analyticsAny.track('language_changed', {
             language: currentLang,
             page: window.location.pathname,
             timestamp: new Date().toISOString()

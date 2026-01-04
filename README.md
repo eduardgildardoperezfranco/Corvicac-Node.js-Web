@@ -69,15 +69,26 @@ Aplicación web moderna para CORVICAC (Corporación de Afrocolombianos y Mestizo
    NEXT_PUBLIC_VOLUNTEERS_ENABLED=true
    ```
 
-4. **Iniciar el servidor de desarrollo:**
+4. **Iniciar el servidor de desarrollo (métodos disponibles):**
+   
+   **Método recomendado (acceso directo):**
+   - Haz doble clic en `start-dev.bat`
+   - Luego haz doble clic en `INICIAR_SERVIDOR.url`
+   
+   **Método alternativo (línea de comandos):**
    ```bash
    npm run dev
    # o
    yarn dev
    ```
+   
+   **Método de monitoreo (mantenimiento):**
+   - Ejecuta `monitor-server.bat` para verificar y reiniciar automáticamente el servidor
 
 5. **Abrir en el navegador:**
    Ve a `http://localhost:3000`
+   
+   Para más detalles sobre el servidor de desarrollo, consulta [DEV_SERVER_README.md](./DEV_SERVER_README.md)
 
 ## 🏗️ Estructura del Proyecto
 
