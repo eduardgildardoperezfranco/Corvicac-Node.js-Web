@@ -12,7 +12,6 @@ export default function StructuredData({ type = 'NGO', data = {} }: StructuredDa
     const getStructuredData = () => {
         if (type === 'NGO') {
             return {
-                '@context': 'https://schema.org',
                 '@type': 'NGO',
                 ...META_TAGS.ORGANIZATION,
                 ...data,
