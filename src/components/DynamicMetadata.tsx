@@ -13,7 +13,7 @@ export default function DynamicMetadata() {
         document.documentElement.lang = currentLang;
         
         // Update page title
-        const pageTitle = t('metadata').title;
+        const pageTitle = (t('metadata') as any).title;
         document.title = pageTitle;
         
         // Update meta description

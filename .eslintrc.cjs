@@ -49,11 +49,6 @@ module.exports = {
       rules: {
         '@typescript-eslint/no-explicit-any': 'off',
         'no-restricted-syntax': 'off'
-      },
-      // Documentación obligatoria para excepciones - Prevención de loops
-      comments: {
-        allowBlock: true,
-        allowLine: true
       }
     },
     {
