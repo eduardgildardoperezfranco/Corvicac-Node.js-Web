@@ -7,7 +7,7 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    '@typescript-eslint/recommended',
+    // '@typescript-eslint/recommended', // Comentado por incompatibilidad con ESLint 8
     'next/core-web-vitals',
   ],
   parser: '@typescript-eslint/parser',

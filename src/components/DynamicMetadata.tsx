@@ -7,25 +7,26 @@ import { analytics } from '@/lib/analytics';
 export default function DynamicMetadata() {
     const { t } = useTranslations();
     const currentLang = getCurrentLanguage();
+    const metadata = t('metadata') as any;
 
     useEffect(() => {
         // Update document language
         document.documentElement.lang = currentLang;
         
         // Update page title
-        const pageTitle = (t('metadata') as any).title;
+        const pageTitle = metadata.title;
         document.title = pageTitle;
         
         // Update meta description
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-            metaDescription.setAttribute('content', t('metadata').description);
+            metaDescription.setAttribute('content', metadata.description);
         }
         
         // Update meta keywords
         const metaKeywords = document.querySelector('meta[name="keywords"]');
         if (metaKeywords) {
-            metaKeywords.setAttribute('content', t('metadata').keywords);
+            metaKeywords.setAttribute('content', metadata.keywords);
         }
         
         // Update Open Graph tags
@@ -36,7 +37,7 @@ export default function DynamicMetadata() {
         
         const ogDescription = document.querySelector('meta[property="og:description"]');
         if (ogDescription) {
-            ogDescription.setAttribute('content', t('metadata').description);
+            ogDescription.setAttribute('content', metadata.description);
         }
         
         const ogLocale = document.querySelector('meta[property="og:locale"]');
@@ -52,7 +53,7 @@ export default function DynamicMetadata() {
         
         const twitterDescription = document.querySelector('meta[name="twitter:description"]');
         if (twitterDescription) {
-            twitterDescription.setAttribute('content', t('metadata').description);
+            twitterDescription.setAttribute('content', metadata.description);
         }
         
         // Add hreflang tags for all supported languages

@@ -52,9 +52,6 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
-    turbopack: {
-      root: process.cwd(),
-    },
   },
 
 
