@@ -1,11 +1,11 @@
 // UI Components Export
-export { default as Button } from './Button';
-export { default as Container } from './Container';
-export { default as Card, CardHeader, CardContent, CardFooter, CardTitle, CardDescription } from './Card';
-export { default as Skeleton } from './Skeleton';
-export { default as LoadingSpinner } from './LoadingSpinner';
-export { default as Alert } from './Alert';
-export { default as Badge } from './Badge';
+export { default as Button } from './button';
+export { default as Container } from './container';
+export { default as Card, CardHeader, CardContent, CardFooter, CardTitle, CardDescription } from './card';
+export { default as Skeleton } from './skeleton';
+export { default as LoadingSpinner } from './loadingspinner';
+export { default as Alert } from './alert';
+export { default as Badge } from './badge';
 
 // Form Components Export
-export { FormField, Input, Textarea, Select, Checkbox, RadioGroup } from './Form';
+export { FormField, Input, Textarea, Select, Checkbox, RadioGroup } from './form';

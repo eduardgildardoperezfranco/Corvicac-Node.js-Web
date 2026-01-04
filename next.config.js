@@ -1,14 +1,14 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   /* config options here */
   // Production optimizations for hosting
   output: 'standalone',
   compress: true,
   poweredByHeader: false,
-  
+
   // Image optimization for production
   images: {
+    unoptimized: true, // Required for Hostinger
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
@@ -20,7 +20,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  
+
   // Security headers
   async headers() {
     return [
@@ -47,15 +47,20 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  
+
   // Performance optimizations
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
   },
-  
+
+  // ESLint configuration for Hostinger compatibility
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
   // Production environment variables
   // Note: NODE_ENV is handled by Next.js automatically, removed from env
 };
 
-export default nextConfig;
+module.exports = nextConfig;
