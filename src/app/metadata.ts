@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { META_TAGS } from '@/lib/constants';
+import { createOpenGraphMetadata, createTwitterMetadata } from '@/types/metadata';
 
 export const metadata: Metadata = {
     title: {
@@ -32,8 +33,8 @@ export const metadata: Metadata = {
             'ru': '/ru',
         },
     },
-    openGraph: {
-        type: META_TAGS.OPEN_GRAPH.TYPE,
+    openGraph: createOpenGraphMetadata({
+        type: 'website',
         locale: META_TAGS.OPEN_GRAPH.LOCALE,
         url: 'https://corvicac.org',
         title: META_TAGS.DEFAULT_TITLE,
@@ -47,15 +48,15 @@ export const metadata: Metadata = {
                 alt: 'CORVICAC - Ayuda Humanitaria y Apoyo Fiscal a Víctimas del Conflicto en Colombia',
             },
         ],
-    },
-    twitter: {
-        card: META_TAGS.TWITTER.CARD,
+    }),
+    twitter: createTwitterMetadata({
+        card: 'summary_large_image',
         title: META_TAGS.DEFAULT_TITLE,
         description: META_TAGS.DEFAULT_DESCRIPTION,
         images: [META_TAGS.TWITTER.IMAGE],
         creator: META_TAGS.TWITTER.CREATOR,
         site: META_TAGS.TWITTER.SITE,
-    },
+    }),
     robots: {
         index: true,
         follow: true,
@@ -83,9 +84,9 @@ export const metadata: Metadata = {
         'charset': META_TAGS.CHARSET,
     },
     verification: {
-        google: META_TAGS.VERIFICATION.GOOGLE,
-        yandex: META_TAGS.VERIFICATION.YANDEX,
-        bing: META_TAGS.VERIFICATION.BING,
+        google: META_TAGS.VERIFICATION.GOOGLE || '',
+        yandex: META_TAGS.VERIFICATION.YANDEX || '',
+        bing: META_TAGS.VERIFICATION.BING || '',
     },
     category: 'nonprofit',
 };
