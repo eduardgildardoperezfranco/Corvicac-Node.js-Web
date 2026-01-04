@@ -86,7 +86,6 @@ export const metadata: Metadata = {
     verification: {
         google: META_TAGS.VERIFICATION.GOOGLE || '',
         yandex: META_TAGS.VERIFICATION.YANDEX || '',
-        bing: META_TAGS.VERIFICATION.BING || '',
     },
     category: 'nonprofit',
 };

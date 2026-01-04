@@ -52,12 +52,12 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
+    turbopack: {
+      root: process.cwd(),
+    },
   },
 
-  // ESLint configuration for Hostinger compatibility
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+
 
   // Production environment variables
   // Note: NODE_ENV is handled by Next.js automatically, removed from env

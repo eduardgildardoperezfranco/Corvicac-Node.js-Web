@@ -3,6 +3,7 @@
   "rules": {
     // Add any custom rules here
   },
+  "ignoreDuringBuilds": true,
   "ignorePatterns": [
     ".next/**",
     "out/**",
