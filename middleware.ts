@@ -55,10 +55,10 @@ function getPreferredLanguage(request: NextRequest): string {
         const countryToLang: Record<string, string> = {
             'CO': 'es', 'ES': 'es', 'MX': 'es', 'AR': 'es', 'CL': 'es',
             'US': 'en', 'GB': 'en', 'CA': 'en', 'AU': 'en',
-            'FR': 'fr', 'BE': 'fr', 'CA': 'fr',
+            'FR': 'fr', 'BE': 'fr',
             'DE': 'de', 'AT': 'de', 'CH': 'de',
             'BR': 'pt', 'PT': 'pt',
-            'IT': 'it', 'CH': 'it',
+            'IT': 'it',
             'SA': 'ar', 'AE': 'ar', 'EG': 'ar',
             'CN': 'zh', 'HK': 'zh', 'TW': 'zh',
             'JP': 'ja',
