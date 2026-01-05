@@ -7,8 +7,12 @@
       "esnext",
       "es2020"
     ],
+    "types": [
+      "react",
+      "react-dom"
+    ],
     "allowJs": true,
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "strict": true,
     "noEmit": false,
     "esModuleInterop": true,
