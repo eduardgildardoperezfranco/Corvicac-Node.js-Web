@@ -5,14 +5,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "set NODE_ENV=production&& next build",
+    "start": "set NODE_ENV=production&& next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
-    "build:analyze": "ANALYZE=true next build",
-    "hostiger:build": "npm run build",
-    "hostiger:deploy": "npm run build"
+    "build:analyze": "set NODE_ENV=production&& set ANALYZE=true&& next build",
+    "hostiger:build": "set NODE_ENV=production&& next build",
+    "hostiger:deploy": "set NODE_ENV=production&& next build"
   },
   "dependencies": {
     "aos": "^2.3.4",
@@ -30,7 +30,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.20",
-    "eslint": "^9.15.0",
+    "eslint": "^8.57.0",
     "eslint-config-next": "14.2.35",
     "tailwindcss": "^4",
     "typescript": "^5"
