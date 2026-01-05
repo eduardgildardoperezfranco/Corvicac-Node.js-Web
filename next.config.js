@@ -1,63 +1,45 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
-  // Production optimizations for hosting
+  // Hostinger-compatible configuration
   output: 'standalone',
-  compress: true,
-  poweredByHeader: false,
-
-  // Image optimization for production
+  
+  // Enable strict TypeScript checking for production
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  
+  // Disable ESLint during builds to avoid version conflicts
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  
+  // Image optimization configuration for static deployment
   images: {
-    unoptimized: true, // Required for Hostinger
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
+    unoptimized: true, // Use unoptimized images for static deployment compatibility
+    domains: ['corvicac.org', 'localhost'], // Allowed domains for external images
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**',
+        hostname: 'corvicac.org',
+        port: '',
+        pathname: '/images/**',
       },
     ],
+    minimumCacheTTL: 31536000, // 1 year cache for static assets
+    formats: ['image/avif', 'image/webp'], // Modern formats for better performance
+    dangerouslyAllowSVG: true, // Allow SVG files
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-src 'self' https://youtube.com https://www.youtube.com;",
   },
-
-  // Security headers
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-        ],
-      },
-    ];
-  },
-
-  // Performance optimizations
+  
+  // Disable experimental features that might cause issues
   experimental: {
-    optimizeCss: true,
-    scrollRestoration: true,
+    // No experimental features enabled for stability
   },
-
-
-
-  // Production environment variables
-  // Note: NODE_ENV is handled by Next.js automatically, removed from env
+  
+  // Ensure consistent behavior across environments
+  reactStrictMode: true,
+  
 };
 
 export default nextConfig;

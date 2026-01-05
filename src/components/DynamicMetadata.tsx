@@ -11,6 +11,8 @@ export default function DynamicMetadata() {
     const metadata = t('metadata') as any;
 
     useEffect(() => {
+        if (typeof window === 'undefined') return;
+        
         // Update document language
         document.documentElement.lang = currentLang;
         

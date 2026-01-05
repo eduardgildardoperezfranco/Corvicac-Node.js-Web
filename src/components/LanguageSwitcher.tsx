@@ -38,6 +38,8 @@ export default function LanguageSwitcher() {
     };
 
     useEffect(() => {
+        if (typeof window === 'undefined') return;
+        
         const savedLang = localStorage.getItem('preferred-language');
         const detectedLang = detectBrowserLanguage();
         const current = getCurrentLanguage();

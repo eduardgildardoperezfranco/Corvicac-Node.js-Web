@@ -1,4 +1,5 @@
 
+import Image from 'next/image';
 import Container from '@/components/ui/Container';
 
 export default function NosotrosPage() {
@@ -125,11 +126,13 @@ export default function NosotrosPage() {
                         {/* Image Section */}
                         <div className="w-full lg:w-1/3 relative group">
                             <div className="relative overflow-hidden rounded-3xl shadow-2xl border-4 border-[var(--color-primary-gold)]">
-                                <img
+                                <Image
                                     src="/Representante_legal_saliendo_del_Congreso_de_Colombia.jpeg"
                                     alt="José Carlos Obando Angulo, Representante Legal de Corvicac, saliendo del Congreso de Colombia"
+                                    width={800}
+                                    height={600}
                                     className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                                    loading="lazy"
+                                    unoptimized={true}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                                 <div className="absolute bottom-6 left-6 text-white">
@@ -229,11 +232,14 @@ export default function NosotrosPage() {
                         {/* Human Rights Defender Certification */}
                         <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-3 hover:border-gray-200">
                             <div className="relative overflow-hidden aspect-square">
-                                <img
+                                <Image
                                     src="/Certificacion_Defensor_Derechos_Humanos.jpeg"
                                     alt="Certificación como Defensor de Derechos Humanos"
-                                    className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
-                                    loading="lazy"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                    className="transition-transform duration-1000 ease-out group-hover:scale-110"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    unoptimized={true}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"></div>
                                 <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out transform translate-y-2 group-hover:translate-y-0">
@@ -248,9 +254,11 @@ export default function NosotrosPage() {
                                     Reconocimiento Humanitario
                                 </h3>
                                 <p className="text-gray-600 text-sm leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
-                                    Certificación otorgada por organizaciones internacionales en reconocimiento
+                                    <span className="text-[var(--color-primary-gold)] font-bold">"La justicia no es un privilegio, es un derecho fundamental que restaura la dignidad humana."</span> Certificación otorgada por organizaciones internacionales en reconocimiento
                                     al trabajo incansable en la defensa de los derechos humanos y la protección
-                                    de las víctimas del conflicto armado.
+                                    de las víctimas del conflicto armado. Este reconocimiento simboliza la esperanza
+                                    de que, incluso en las circunstancias más oscuras, la luz de la justicia puede
+                                    iluminar el camino hacia la sanación y la reconstrucción.
                                 </p>
                             </div>
                         </div>
@@ -258,11 +266,14 @@ export default function NosotrosPage() {
                         {/* Police Protection Recognition */}
                         <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-3 hover:border-gray-200">
                             <div className="relative overflow-hidden aspect-square">
-                                <img
+                                <Image
                                     src="/Representante_legal_con_proteccion_de_la_Policia_Colombia.jpeg"
                                     alt="Representante Legal con protección de la Policía Nacional de Colombia"
-                                    className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
-                                    loading="lazy"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                    className="transition-transform duration-1000 ease-out group-hover:scale-110"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    unoptimized={true}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"></div>
                                 <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out transform translate-y-2 group-hover:translate-y-0">
@@ -277,8 +288,11 @@ export default function NosotrosPage() {
                                     Seguridad y Protección
                                 </h3>
                                 <p className="text-gray-600 text-sm leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
-                                    Reconocimiento de la Policía Nacional de Colombia por el trabajo de alto riesgo
+                                    <span className="text-[var(--color-primary-gold)] font-bold">"La verdadera valentía no es la ausencia de miedo, sino la decisión de actuar a pesar de él."</span> Reconocimiento de la Policía Nacional de Colombia por el trabajo de alto riesgo
                                     en la defensa de los derechos humanos y la protección de las comunidades vulnerables.
+                                    Este reconocimiento representa el compromiso inquebrantable de proteger a quienes
+                                    han sido silenciados, demostrando que incluso en los momentos más peligrosos,
+                                    la justicia prevalece.
                                 </p>
                             </div>
                         </div>
@@ -286,11 +300,14 @@ export default function NosotrosPage() {
                         {/* Marine Corps Recognition */}
                         <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-3 hover:border-gray-200">
                             <div className="relative overflow-hidden aspect-square">
-                                <img
+                                <Image
                                     src="/Reconocimiento_a_la_Corporacion_por_parte_de_la_Infanteria_de_marina_Colombiana.jpeg"
                                     alt="Reconocimiento a la Corporación por parte de la Infantería de Marina Colombiana"
-                                    className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
-                                    loading="lazy"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                    className="transition-transform duration-1000 ease-out group-hover:scale-110"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    unoptimized={true}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"></div>
                                 <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out transform translate-y-2 group-hover:translate-y-0">
@@ -305,9 +322,11 @@ export default function NosotrosPage() {
                                     Construcción de Paz
                                 </h3>
                                 <p className="text-gray-600 text-sm leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
-                                    Reconocimiento de la Infantería de Marina Colombiana por la labor conjunta
+                                    <span className="text-[var(--color-primary-gold)] font-bold">"La paz no es solo la ausencia de guerra, es la presencia de justicia, dignidad y oportunidades."</span> Reconocimiento de la Infantería de Marina Colombiana por la labor conjunta
                                     en la construcción de paz y el fortalecimiento de las comunidades afectadas
-                                    por el conflicto armado.
+                                    por el conflicto armado. Este reconocimiento simboliza la unión de fuerzas
+                                    entre instituciones y sociedad civil para tejer un futuro donde las cicatrices
+                                    del pasado se conviertan en semillas de esperanza.
                                 </p>
                             </div>
                         </div>
@@ -315,11 +334,14 @@ export default function NosotrosPage() {
                         {/* CORVICAC Institutional Recognition */}
                         <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-3 hover:border-gray-200">
                             <div className="relative overflow-hidden aspect-square">
-                                <img
+                                <Image
                                     src="/Corvicac_Certificacion_Defensor_Derechos_Humanos.jpeg"
                                     alt="CORVICAC Certificación como Defensor de Derechos Humanos"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
                                     className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
-                                    loading="lazy"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    unoptimized={true}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"></div>
                                 <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out transform translate-y-2 group-hover:translate-y-0">
@@ -334,8 +356,100 @@ export default function NosotrosPage() {
                                     Trayectoria Ejemplar
                                 </h3>
                                 <p className="text-gray-600 text-sm leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
-                                    Distinción otorgada a CORVICAC por su trayectoria ejemplar en la defensa de los derechos humanos
+                                    <span className="text-[var(--color-primary-gold)] font-bold">"De las cenizas del dolor nace la fuerza para transformar vidas."</span> Distinción otorgada a CORVICAC por su trayectoria ejemplar en la defensa de los derechos humanos
                                     y su compromiso inquebrantable con las víctimas del conflicto armado colombiano.
+                                    Este reconocimiento es un testimonio de que, incluso frente a la adversidad más extrema,
+                                    el espíritu humano puede elevarse para convertirse en un faro de esperanza
+                                    y un motor de cambio social.
+                                </p>
+                            </div>
+                        </div>
+                        {/* Justice for the Needy - Unique Image */}
+                        <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-3 hover:border-gray-200">
+                            <div className="relative overflow-hidden aspect-square">
+                                <Image
+                                    src="/Nosotros_en_busqueda_de_Justicia_para_los_mas_necesitados.jpeg"
+                                    alt="Nosotros en búsqueda de Justicia para los más necesitados"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                    className="transition-transform duration-1000 ease-out group-hover:scale-110"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    unoptimized={true}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"></div>
+                                <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out transform translate-y-2 group-hover:translate-y-0">
+                                    <span className="bg-[var(--color-primary-gold)] text-[var(--color-primary-black)] px-4 py-2 rounded-full text-sm font-bold shadow-lg border border-[var(--color-primary-gold)]/30">
+                                        Justicia Social
+                                    </span>
+                                </div>
+                                <div className="absolute inset-0 bg-[var(--color-primary-gold)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"></div>
+                            </div>
+                            <div className="p-6">
+                                <h3 className="font-bold text-xl mb-3 text-[var(--color-primary-deep)] group-hover:text-[var(--color-primary-gold)] transition-colors duration-300">
+                                    Justicia para los Más Vulnerables
+                                </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
+                                    <span className="text-[var(--color-primary-gold)] font-bold">"La verdadera justicia no mira el pasado con resentimiento, sino al futuro con esperanza."</span> Este momento captura nuestro compromiso incansable con las comunidades más vulnerables, aquellos que han sido olvidados por el sistema. Representa la lucha por la equidad y la restauración de derechos fundamentales para quienes más lo necesitan.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Legal Representation at Congress - Unique Image */}
+                        <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-3 hover:border-gray-200">
+                            <div className="relative overflow-hidden aspect-square">
+                                <Image
+                                    src="/Representante_legal_saliendo_del_Congreso_de_Colombia.jpeg"
+                                    alt="Representante Legal saliendo del Congreso de Colombia"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                    className="transition-transform duration-1000 ease-out group-hover:scale-110"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    unoptimized={true}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"></div>
+                                <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out transform translate-y-2 group-hover:translate-y-0">
+                                    <span className="bg-[var(--color-primary-deep)] text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg border border-[var(--color-primary-deep)]/30">
+                                        Voz Institucional
+                                    </span>
+                                </div>
+                                <div className="absolute inset-0 bg-[var(--color-primary-deep)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"></div>
+                            </div>
+                            <div className="p-6">
+                                <h3 className="font-bold text-xl mb-3 text-[var(--color-primary-deep)] group-hover:text-[var(--color-primary-deep)] transition-colors duration-300">
+                                    Representación Legal Institucional
+                                </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
+                                    <span className="text-[var(--color-primary-gold)] font-bold">"Donde hay silencio, nosotros llevamos la voz de los que no pueden hablar."</span> Este poderoso símbolo de nuestra representación en el Congreso Nacional demuestra que las víctimas del conflicto ya no están solas. Cada paso en esos pasillos representa la lucha por políticas públicas que restauren derechos y construyan un futuro más justo.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Supporting Programs - Unique Image */}
+                        <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-3 hover:border-gray-200">
+                            <div className="relative overflow-hidden aspect-square">
+                                <Image
+                                    src="/Representante_Legal_apoyando_en_los_eventos_de_los_programas.jpeg"
+                                    alt="Representante Legal apoyando en los eventos de los programas"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                    className="transition-transform duration-1000 ease-out group-hover:scale-110"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    unoptimized={true}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"></div>
+                                <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out transform translate-y-2 group-hover:translate-y-0">
+                                    <span className="bg-[var(--color-primary-black)] text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg border border-[var(--color-primary-black)]/30">
+                                        Compromiso Directo
+                                    </span>
+                                </div>
+                                <div className="absolute inset-0 bg-[var(--color-primary-black)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"></div>
+                            </div>
+                            <div className="p-6">
+                                <h3 className="font-bold text-xl mb-3 text-[var(--color-primary-deep)] group-hover:text-[var(--color-primary-gold)] transition-colors duration-300">
+                                    Liderazgo en Terreno
+                                </h3>
+                                <p className="text-gray-600 text-sm leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
+                                    <span className="text-[var(--color-primary-gold)] font-bold">"El verdadero cambio ocurre cuando las palabras se convierten en acción."</span> Esta imagen encapsula nuestro enfoque de liderazgo directo y participación activa en los programas comunitarios. No nos limitamos a hablar de cambio, lo creamos mediante la presencia constante y el apoyo tangible a las comunidades afectadas por el conflicto.
                                 </p>
                             </div>
                         </div>
@@ -353,6 +467,7 @@ export default function NosotrosPage() {
                     </div>
                 </Container>
             </section>
+
 
             {/* Video Testimony Section */}
             <section className="py-20 bg-gradient-to-br from-[var(--color-secondary-soft-gray)] via-white to-[var(--color-primary-deep)] relative overflow-hidden">
@@ -446,6 +561,34 @@ export default function NosotrosPage() {
                                 className="border-2 border-[var(--color-primary-deep)] text-[var(--color-primary-deep)] px-8 py-3 rounded-full font-bold hover:bg-[var(--color-primary-deep)] hover:text-white transition-all duration-300"
                             >
                                 Conoce Nuestros Programas
+                            </a>
+                        </div>
+                        
+                        {/* Navigation Links */}
+                        <div className="mt-12 flex flex-wrap justify-center gap-4">
+                            <a
+                                href="/"
+                                className="bg-[var(--color-primary-gold)] text-[var(--color-primary-black)] px-4 py-2 rounded-full font-bold hover:bg-[var(--color-primary-deep)] hover:text-white transition-all duration-300"
+                            >
+                                Inicio
+                            </a>
+                            <a
+                                href="/eventos"
+                                className="bg-[var(--color-primary-gold)] text-[var(--color-primary-black)] px-4 py-2 rounded-full font-bold hover:bg-[var(--color-primary-deep)] hover:text-white transition-all duration-300"
+                            >
+                                Nuestros Eventos
+                            </a>
+                            <a
+                                href="/programas"
+                                className="bg-[var(--color-primary-gold)] text-[var(--color-primary-black)] px-4 py-2 rounded-full font-bold hover:bg-[var(--color-primary-deep)] hover:text-white transition-all duration-300"
+                            >
+                                Nuestros Programas
+                            </a>
+                            <a
+                                href="/apoyar"
+                                className="bg-[var(--color-primary-gold)] text-[var(--color-primary-black)] px-4 py-2 rounded-full font-bold hover:bg-[var(--color-primary-deep)] hover:text-white transition-all duration-300"
+                            >
+                                Apóyanos
                             </a>
                         </div>
                     </div>

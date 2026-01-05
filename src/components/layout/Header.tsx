@@ -42,32 +42,52 @@ export default function Header() {
                     <span className="font-heading font-bold text-xl text-[var(--color-primary-green)] hidden sm:block">CORVICAC</span>
                 </Link>
 
-                <nav className="hidden md:flex gap-6" role="navigation" aria-label="Menú de navegación">
-                    <Link
-                        href="/"
-                        className="text-sm font-medium text-[var(--color-primary-black)] hover:text-[var(--color-flag-yellow)] transition-colors"
-                        aria-current="page"
-                    >
-                        Inicio
-                    </Link>
-                    <Link
-                        href="/nosotros"
-                        className="text-sm font-medium text-[var(--color-primary-black)] hover:text-[var(--color-flag-yellow)] transition-colors"
-                    >
-                        Nosotros
-                    </Link>
-                    <Link
-                        href="/eventos"
-                        className="text-sm font-medium text-[var(--color-primary-black)] hover:text-[var(--color-flag-yellow)] transition-colors"
-                    >
-                        Eventos
-                    </Link>
-                    <Link
-                        href="/programas"
-                        className="text-sm font-medium text-[var(--color-primary-black)] hover:text-[var(--color-flag-yellow)] transition-colors"
-                    >
-                        Programas
-                    </Link>
+                <nav className="hidden md:flex items-center justify-center flex-1" role="navigation" aria-label="Menú de navegación">
+                    <div className="flex gap-6">
+                        <Link
+                            href="/"
+                            className="text-sm font-medium text-[var(--color-primary-black)] hover:text-[var(--color-flag-yellow)] transition-colors"
+                            aria-current="page"
+                        >
+                            Inicio
+                        </Link>
+                        <Link
+                            href="/nosotros"
+                            className="text-sm font-medium text-[var(--color-primary-black)] hover:text-[var(--color-flag-yellow)] transition-colors"
+                        >
+                            Nosotros
+                        </Link>
+                        <Link
+                            href="/eventos"
+                            className="text-sm font-medium text-[var(--color-primary-black)] hover:text-[var(--color-flag-yellow)] transition-colors"
+                        >
+                            Eventos
+                        </Link>
+                        <Link
+                            href="/programas"
+                            className="text-sm font-medium text-[var(--color-primary-black)] hover:text-[var(--color-flag-yellow)] transition-colors"
+                        >
+                            Programas
+                        </Link>
+                        <Link
+                            href="/apoyar"
+                            className="text-sm font-medium text-[var(--color-primary-black)] hover:text-[var(--color-flag-yellow)] transition-colors"
+                        >
+                            Apoyar
+                        </Link>
+                        <Link
+                            href="/accessibility-guide"
+                            className="text-sm font-medium text-[var(--color-primary-black)] hover:text-[var(--color-flag-yellow)] transition-colors"
+                        >
+                            Accesibilidad
+                        </Link>
+                        <Link
+                            href="/terminos-y-condiciones"
+                            className="text-sm font-medium text-[var(--color-primary-black)] hover:text-[var(--color-flag-yellow)] transition-colors"
+                        >
+                            Legal
+                        </Link>
+                    </div>
                 </nav>
 
                 <div className="flex items-center gap-4">
@@ -133,6 +153,24 @@ export default function Header() {
                                 className="block py-3 px-4 rounded-md hover:bg-gray-50 transition-colors"
                             >
                                 Programas
+                            </Link>
+                            <Link
+                                href="/apoyar"
+                                className="block py-3 px-4 rounded-md hover:bg-gray-50 transition-colors"
+                            >
+                                Apoyar
+                            </Link>
+                            <Link
+                                href="/accessibility-guide"
+                                className="block py-3 px-4 rounded-md hover:bg-gray-50 transition-colors"
+                            >
+                                Accesibilidad
+                            </Link>
+                            <Link
+                                href="/terminos-y-condiciones"
+                                className="block py-3 px-4 rounded-md hover:bg-gray-50 transition-colors"
+                            >
+                                Legal
                             </Link>
                         </div>
                     </Container>

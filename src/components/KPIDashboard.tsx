@@ -29,6 +29,8 @@ export default function KPIDashboard() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        if (typeof window === 'undefined') return;
+        
         // Initialize KPIs with mock data
         const initialKPIs: KPI[] = [
             {

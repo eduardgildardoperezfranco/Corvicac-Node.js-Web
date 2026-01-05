@@ -98,6 +98,8 @@ export default function VoiceAssistant({ isActive, onStatusChange }: VoiceAssist
   };
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     if (isActive) {
       // Saludo inicial al activar el asistente
       speak("Bienvenido al sitio web de CORVICAC. Soy su asistente de voz. Estamos en la página de inicio. Puede usar los siguientes comandos: 'Menú' para escuchar las opciones de navegación, 'Sobre nosotros' para conocer nuestra historia, 'Eventos' para ver nuestras actividades, 'Programas' para conocer nuestros proyectos, 'Apoyar' para saber cómo ayudarnos, 'Accesibilidad' para ajustar las configuraciones, o 'Detener' para silenciarme.");

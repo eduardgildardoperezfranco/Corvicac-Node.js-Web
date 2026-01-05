@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,6 +18,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://corvicac.org'),
   title: {
     default: "CORVICAC - Justicia, Igualdad, Respeto",
     template: "%s | CORVICAC"
@@ -77,47 +80,17 @@ export const metadata: Metadata = {
   },
 };
 
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import Container from "@/components/ui/Container";
-import AccessibilityPanel from "@/components/AccessibilityPanel";
-import StructuredData from "@/components/StructuredData";
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="es"
-      className={`${inter.variable} ${poppins.variable}`}
-      itemScope
-      itemType="https://schema.org/WebPage"
-    >
-      <head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" />
-        <meta name="theme-color" content="#1E7F43" />
-        <meta name="msapplication-TileColor" content="#1E7F43" />
-        <StructuredData type="NGO" />
-      </head>
-      <body
-        className="antialiased flex flex-col min-h-screen"
-        itemProp="mainContentOfPage"
-        suppressHydrationWarning
-      >
+    <html lang="es">
+      <body className={`${inter.variable} ${poppins.variable} antialiased`}>
         <Header />
-        <div className="flex-grow">
-          <Container maxWidth="full" padding="md">
-            {children}
-          </Container>
-        </div>
+        <main>{children}</main>
         <Footer />
-        <AccessibilityPanel />
       </body>
     </html>
   );

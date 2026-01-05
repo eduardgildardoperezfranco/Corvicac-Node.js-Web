@@ -1417,6 +1417,34 @@ export default function ApoyarPage() {
                 </div>
             )}
 
+            {/* Navigation Links */}
+            <div className="mt-16 flex flex-wrap justify-center gap-4 bg-gradient-to-r from-[var(--color-primary-green)]/5 to-[var(--color-primary-deep)]/5 py-8 rounded-2xl">
+                <a
+                    href="/"
+                    className="bg-[var(--color-primary-green)] text-white px-4 py-2 rounded-lg hover:bg-[var(--color-primary-deep)] transition-colors shadow-md hover:shadow-lg"
+                >
+                    Inicio
+                </a>
+                <a
+                    href="/nosotros"
+                    className="bg-[var(--color-primary-green)] text-white px-4 py-2 rounded-lg hover:bg-[var(--color-primary-deep)] transition-colors shadow-md hover:shadow-lg"
+                >
+                    Quiénes Somos
+                </a>
+                <a
+                    href="/eventos"
+                    className="bg-[var(--color-primary-green)] text-white px-4 py-2 rounded-lg hover:bg-[var(--color-primary-deep)] transition-colors shadow-md hover:shadow-lg"
+                >
+                    Nuestros Eventos
+                </a>
+                <a
+                    href="/programas"
+                    className="bg-[var(--color-primary-green)] text-white px-4 py-2 rounded-lg hover:bg-[var(--color-primary-deep)] transition-colors shadow-md hover:shadow-lg"
+                >
+                    Nuestros Programas
+                </a>
+            </div>
+
         </main>
     );
 }

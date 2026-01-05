@@ -11,13 +11,18 @@ interface StructuredDataProps {
 export default function StructuredData({ type = 'NGO', data = {} }: StructuredDataProps) {
     const getStructuredData = () => {
         if (type === 'NGO') {
+            // Destructure to separate @type from other properties to avoid duplication
+            const { '@type': orgType, ...restOfOrg } = META_TAGS.ORGANIZATION;
+            // Also remove @type from data to prevent conflicts
+            const { '@type': dataType, ...cleanData } = data;
             return {
-                '@type': 'NGO',
-                ...META_TAGS.ORGANIZATION,
-                ...data,
+                '@context': 'https://schema.org',
+                '@type': 'NGO', // Use the explicit type for this component
+                ...restOfOrg, // Spread the remaining properties from META_TAGS.ORGANIZATION
+                ...cleanData, // Spread custom data without @type conflicts
                 mainEntityOfPage: {
                     '@type': 'WebPage',
-                    '@id': 'https://corvicac.org',
+                    '@id': data.url || '',
                 },
                 knowsAbout: [
                     'Conflicto armado en Colombia',
@@ -82,14 +87,16 @@ export default function StructuredData({ type = 'NGO', data = {} }: StructuredDa
                 },
             };
         } else if (type === 'Article' || type === 'NewsArticle') {
+            // Remove @type from data to prevent conflicts
+            const { '@type': dataType, ...cleanData } = data;
             return {
                 '@context': 'https://schema.org',
                 '@type': type,
-                headline: data.headline || '',
-                description: data.description || '',
-                image: data.image || [],
-                datePublished: data.datePublished || '',
-                dateModified: data.dateModified || '',
+                headline: cleanData.headline || '',
+                description: cleanData.description || '',
+                image: cleanData.image || [],
+                datePublished: cleanData.datePublished || '',
+                dateModified: cleanData.dateModified || '',
                 author: {
                     '@type': 'Organization',
                     name: 'CORVICAC',
@@ -105,7 +112,7 @@ export default function StructuredData({ type = 'NGO', data = {} }: StructuredDa
                 },
                 mainEntityOfPage: {
                     '@type': 'WebPage',
-                    '@id': data.url || '',
+                    '@id': cleanData.url || '',
                 },
                 about: [
                     'Conflicto armado en Colombia',
@@ -121,14 +128,16 @@ export default function StructuredData({ type = 'NGO', data = {} }: StructuredDa
                 },
             };
         } else if (type === 'Event') {
+            // Remove @type from data to prevent conflicts
+            const { '@type': dataType, ...cleanData } = data;
             return {
                 '@context': 'https://schema.org',
                 '@type': 'Event',
-                name: data.name || '',
-                description: data.description || '',
-                startDate: data.startDate || '',
-                endDate: data.endDate || '',
-                location: data.location || {},
+                name: cleanData.name || '',
+                description: cleanData.description || '',
+                startDate: cleanData.startDate || '',
+                endDate: cleanData.endDate || '',
+                location: cleanData.location || {},
                 organizer: {
                     '@type': 'Organization',
                     name: 'CORVICAC',
@@ -140,15 +149,17 @@ export default function StructuredData({ type = 'NGO', data = {} }: StructuredDa
                     'Derechos humanos',
                 ],
                 inLanguage: 'es-CO',
-                offers: data.offers || {},
+                offers: cleanData.offers || {},
             };
         } else if (type === 'WebPage') {
+            // Remove @type from data to prevent conflicts
+            const { '@type': dataType, ...cleanData } = data;
             return {
                 '@context': 'https://schema.org',
                 '@type': 'WebPage',
-                name: data.name || '',
-                description: data.description || '',
-                url: data.url || '',
+                name: cleanData.name || '',
+                description: cleanData.description || '',
+                url: cleanData.url || '',
                 mainEntity: META_TAGS.ORGANIZATION,
                 about: [
                     'Conflicto armado en Colombia',
@@ -168,15 +179,18 @@ export default function StructuredData({ type = 'NGO', data = {} }: StructuredDa
                 dateModified: new Date().toISOString(),
             };
         }
-        return {};
     };
 
+    const structuredData = getStructuredData();
+
     return (
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-                __html: JSON.stringify(getStructuredData()),
-            }}
-        />
+        <Head>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(structuredData),
+                }}
+            />
+        </Head>
     );
 }

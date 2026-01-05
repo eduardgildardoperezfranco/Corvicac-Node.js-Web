@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import Card, { CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
@@ -33,7 +35,7 @@ const projects: Project[] = [
         beneficiaries: 150,
         startDate: '2024-01-15',
         endDate: '2025-12-31',
-        image: '/proyectos/tierras.jpg',
+        image: '/Evento_Visitas_territoriales_asignacion_de_tierras.jpeg',
         impact: 'Recuperación de 500 hectáreas y reubicación digna de 150 familias'
     },
     {
@@ -47,7 +49,7 @@ const projects: Project[] = [
         beneficiaries: 500,
         startDate: '2024-03-01',
         endDate: '2025-06-30',
-        image: '/proyectos/escuelas.jpg',
+        image: '/Evento_Donacion_de_carne_para_asado_para_damnificados_despazados_de_sus_tierras.jpeg',
         impact: '3 escuelas construidas, 500 niños con acceso a educación segura'
     },
     {
@@ -61,7 +63,7 @@ const projects: Project[] = [
         beneficiaries: 300,
         startDate: '2024-02-01',
         endDate: '2025-12-31',
-        image: '/proyectos/emprendimientos.jpg',
+        image: '/SAE_busqueda_de_predios_para_programas_agicolas.jpeg',
         impact: '40 emprendimientos exitosos, generación de empleo sostenible'
     },
     {
@@ -89,7 +91,7 @@ const projects: Project[] = [
         beneficiaries: 80,
         startDate: '2024-01-01',
         endDate: '2025-12-31',
-        image: '/proyectos/vivienda.jpg',
+        image: '/Reintitucion_de_tierras_evento_con_la_SAE_para_la_asignacion_de_tierras_para_la_asociacion.jpeg',
         impact: '80 viviendas construidas con materiales sostenibles y acceso a servicios básicos'
     },
     {
@@ -103,7 +105,7 @@ const projects: Project[] = [
         beneficiaries: 200,
         startDate: '2024-02-15',
         endDate: '2025-12-31',
-        image: '/proyectos/agricultura.jpg',
+        image: '/Eventos_realizacion_de_Visitas_reinstitucion_de_Tierras.jpeg',
         impact: '200 familias con huertas productivas, independencia alimentaria asegurada'
     }
 ];
@@ -265,14 +267,19 @@ export default function EventosPage() {
                         {filteredProjects.map((project) => (
                             <Card key={project.id} className="hover:shadow-xl transition-all duration-300 group">
                                 <div className="relative h-48 rounded-t-xl overflow-hidden">
-                                    <img
+                                    <Image
                                         src={project.image}
                                         alt={project.title}
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        style={{ objectFit: 'cover', objectPosition: project.category === 'Educación' ? 'center 30%' : 'center' }}
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         onError={(e) => {
-                                            e.currentTarget.src = '/LogoCorvicac3D.png';
-                                            e.currentTarget.className = 'w-full h-full object-cover bg-gradient-to-br from-[var(--color-primary-green)] to-[var(--color-primary-deep)]';
+                                            // Fallback to logo on error
+                                            const target = e.target as HTMLImageElement;
+                                            target.src = '/LogoCorvicac3D.png';
+                                            target.style.background = 'linear-gradient(to bottom right, var(--color-primary-green), var(--color-primary-deep))';
                                         }}
+                                        unoptimized={true}
                                     />
                                     <div className="absolute inset-0 bg-black/20" />
                                     <div className="absolute top-4 left-4">
@@ -457,6 +464,22 @@ export default function EventosPage() {
                         >
                             💡 Proponer Evento
                         </Button>
+                    </div>
+                    
+                    {/* Navigation Links */}
+                    <div className="mt-12 flex flex-wrap justify-center gap-4">
+                        <Link href="/" className="bg-white/20 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-colors">
+                            Inicio
+                        </Link>
+                        <Link href="/nosotros" className="bg-white/20 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-colors">
+                            Quiénes Somos
+                        </Link>
+                        <Link href="/programas" className="bg-white/20 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-colors">
+                            Nuestros Programas
+                        </Link>
+                        <Link href="/apoyar" className="bg-white/20 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-colors">
+                            Apóyanos
+                        </Link>
                     </div>
                 </div>
             </section>

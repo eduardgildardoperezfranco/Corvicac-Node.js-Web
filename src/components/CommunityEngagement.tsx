@@ -51,7 +51,13 @@ export default function CommunityEngagement() {
         // Load existing comments
         const savedComments = localStorage.getItem('corvicac-comments');
         if (savedComments) {
-            setComments(JSON.parse(savedComments));
+            const parsedComments = JSON.parse(savedComments);
+            // Convert timestamp strings back to Date objects
+            const commentsWithDates = parsedComments.map((comment: any) => ({
+                ...comment,
+                timestamp: new Date(comment.timestamp)
+            }));
+            setComments(commentsWithDates);
         }
     }, []);
 
@@ -287,7 +293,10 @@ export default function CommunityEngagement() {
                                         </span>
                                     )}
                                     <span className="text-xs text-gray-500">
-                                        {comment.timestamp.toLocaleDateString('es-CO')}
+                                        {comment.timestamp instanceof Date 
+                                            ? comment.timestamp.toLocaleDateString('es-CO')
+                                            : new Date(comment.timestamp).toLocaleDateString('es-CO')
+                                        }
                                     </span>
                                 </div>
                                 <button

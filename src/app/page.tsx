@@ -440,8 +440,24 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Navigation Links */}
+            <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
+              <Link href="/nosotros" className="bg-white/20 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-colors">
+                Quiénes Somos
+              </Link>
+              <Link href="/programas" className="bg-white/20 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-colors">
+                Nuestros Programas
+              </Link>
+              <Link href="/eventos" className="bg-white/20 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-colors">
+                Nuestros Eventos
+              </Link>
+              <Link href="/apoyar" className="bg-white/20 text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-colors">
+                Apóyanos
+              </Link>
+            </div>
+
             {/* Trust Badges */}
-            <div className="mt-8 flex justify-center gap-8 text-sm text-white/70">
+            <div className="mt-8 flex flex-wrap justify-center gap-8 text-sm text-white/70">
               <span>✅ Transparencia Total</span>
               <span>✅ Impacto Medible</span>
               <span>✅ +20 años de trayectoria</span>

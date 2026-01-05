@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import Card, { CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
@@ -29,7 +31,7 @@ const programs: Program[] = [
         duration: 'Permanente',
         beneficiaries: 'Familias desplazadas por conflicto armado',
         impact: 'Recuperación de tierras, seguridad jurídica, restablecimiento de derechos',
-        image: '/programas/justicia.jpg',
+        image: '/Reconocimiento_a_la_Corporacion_por_parte_de_la_Infanteria_de_marina_Colombiana.jpeg',
         status: 'Activo',
         monthlyCost: 15000000,
         annualBeneficiaries: 200
@@ -55,7 +57,7 @@ const programs: Program[] = [
         duration: '6 meses de capacitación + 6 meses de seguimiento',
         beneficiaries: 'Jóvenes y adultos en situación de vulnerabilidad',
         impact: 'Generación de ingresos, autonomía económica, empleo digno',
-        image: '/programas/emprendimiento.jpg',
+        image: '/SAE_busqueda_de_predios_para_programas_agicolas_Y_apicultura.jpeg',
         status: 'Activo',
         monthlyCost: 18000000,
         annualBeneficiaries: 150
@@ -68,7 +70,7 @@ const programs: Program[] = [
         duration: 'Anual',
         beneficiaries: 'Niños, jóvenes y líderes comunitarios',
         impact: 'Cultura de paz, liderazgo juvenil, prevención del conflicto',
-        image: '/programas/educacion.jpg',
+        image: '/SAE_busqueda_de_predios_para_programas_agicolas.jpeg',
         status: 'Activo',
         monthlyCost: 8000000,
         annualBeneficiaries: 1000
@@ -81,7 +83,7 @@ const programs: Program[] = [
         duration: '9 meses',
         beneficiaries: 'Familias desintegradas por el conflicto',
         impact: 'Unidades familiares fortalecidas, cohesión social, apoyo mutuo',
-        image: '/programas/familia.jpg',
+        image: '/Representante_Legal_apoyando_en_los_eventos_de_los_programas.jpeg',
         status: 'En Evaluación',
         monthlyCost: 10000000,
         annualBeneficiaries: 300
@@ -94,7 +96,7 @@ const programs: Program[] = [
         duration: '18 meses',
         beneficiaries: 'Comunidades rurales desplazadas',
         impact: 'Soberanía alimentaria, sostenibilidad ambiental, ingresos estables',
-        image: '/programas/agricultura.jpg',
+        image: '/Salud_Mental_y_Resiliencia.jpeg',
         status: 'En Planeación',
         monthlyCost: 20000000,
         annualBeneficiaries: 120
@@ -107,7 +109,7 @@ const programs: Program[] = [
         duration: '12 meses',
         beneficiaries: 'Mujeres sobrevivientes de violencia de género',
         impact: 'Liderazgo femenino, autonomía, participación ciudadana',
-        image: '/programas/mujeres.jpg',
+        image: '/Representante_legal_con_proteccion_de_la_Policia_Colombia.jpeg',
         status: 'Activo',
         monthlyCost: 9000000,
         annualBeneficiaries: 250
@@ -120,7 +122,7 @@ const programs: Program[] = [
         duration: '10 meses',
         beneficiaries: 'Jóvenes entre 16-28 años en situación de vulnerabilidad',
         impact: 'Capacitación laboral, inclusión social, prevención de reclutamiento',
-        image: '/programas/juventud.jpg',
+        image: '/Representante_legal_saliendo_del_Congreso_de_Colombia.jpeg',
         status: 'Temporal',
         monthlyCost: 14000000,
         annualBeneficiaries: 400
@@ -279,14 +281,19 @@ export default function ProgramasPage() {
                         {filteredPrograms.map((program) => (
                             <Card key={program.id} className="hover:shadow-xl transition-all duration-300 group">
                                 <div className="relative h-48 rounded-t-xl overflow-hidden">
-                                    <img
+                                    <Image
                                         src={program.image}
                                         alt={program.title}
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        style={{ objectFit: 'cover' }}
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         onError={(e) => {
-                                            e.currentTarget.src = '/LogoCorvicac3D.png';
-                                            e.currentTarget.className = 'w-full h-full object-cover bg-gradient-to-br from-[var(--color-primary-green)] to-[var(--color-primary-deep)]';
+                                            // Fallback to logo on error
+                                            const target = e.target as HTMLImageElement;
+                                            target.src = '/LogoCorvicac3D.png';
+                                            target.style.background = 'linear-gradient(to bottom right, var(--color-primary-green), var(--color-primary-deep))';
                                         }}
+                                        unoptimized={true}
                                     />
                                     <div className="absolute inset-0 bg-black/20" />
                                     <div className="absolute top-4 left-4">
@@ -568,6 +575,22 @@ export default function ProgramasPage() {
                         >
                             📋 Descargar Catálogo
                         </Button>
+                    </div>
+                    
+                    {/* Navigation Links */}
+                    <div className="mt-12 flex flex-wrap justify-center gap-4">
+                        <Link href="/" className="bg-[var(--color-primary-green)] text-white px-4 py-2 rounded-lg hover:bg-[var(--color-primary-deep)] transition-colors">
+                            Inicio
+                        </Link>
+                        <Link href="/nosotros" className="bg-[var(--color-primary-green)] text-white px-4 py-2 rounded-lg hover:bg-[var(--color-primary-deep)] transition-colors">
+                            Quiénes Somos
+                        </Link>
+                        <Link href="/eventos" className="bg-[var(--color-primary-green)] text-white px-4 py-2 rounded-lg hover:bg-[var(--color-primary-deep)] transition-colors">
+                            Nuestros Eventos
+                        </Link>
+                        <Link href="/apoyar" className="bg-[var(--color-primary-green)] text-white px-4 py-2 rounded-lg hover:bg-[var(--color-primary-deep)] transition-colors">
+                            Apóyanos
+                        </Link>
                     </div>
                 </div>
             </section>
