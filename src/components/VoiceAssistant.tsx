@@ -189,6 +189,10 @@ export default function VoiceAssistant({ isActive, onStatusChange }: VoiceAssist
 
     // Uso controlado de APIs no tipadas - Solución definitiva
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      speak("Lo siento, el reconocimiento de voz no es compatible con este navegador. Le recomiendo usar Google Chrome para esta funcionalidad.");
+      return;
+    }
     const recognition = new SpeechRecognition();
     
     recognition.lang = 'es-CO';

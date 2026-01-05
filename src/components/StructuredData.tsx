@@ -16,9 +16,8 @@ export default function StructuredData({ type = 'NGO', data = {} }: StructuredDa
             // Also remove @type from data to prevent conflicts
             const { '@type': dataType, ...cleanData } = data;
             return {
-                '@context': 'https://schema.org',
                 '@type': 'NGO', // Use the explicit type for this component
-                ...restOfOrg, // Spread the remaining properties from META_TAGS.ORGANIZATION
+                ...restOfOrg, // Spread the remaining properties from META_TAGS.ORGANIZATION (includes @context)
                 ...cleanData, // Spread custom data without @type conflicts
                 mainEntityOfPage: {
                     '@type': 'WebPage',
