@@ -73,7 +73,7 @@ cp -r .next/standalone hostinger-package/
 cp -r .next/static hostinger-package/.next/
 cp -r public hostinger-package/
 cp package.json hostinger-package/
-cp next.config.ts hostinger-package/
+cp next.config.js hostinger-package/
 
 # Create a startup script
 cat > hostinger-package/start.sh << 'EOF'
