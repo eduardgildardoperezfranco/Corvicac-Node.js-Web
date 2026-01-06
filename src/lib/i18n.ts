@@ -1,7 +1,7 @@
 // Sistema de Internacionalización (i18n) para CORVICAC
 // Soporte UTF-8 y múltiples idiomas para alcance global
 
-export type Language = 'es' | 'en' | 'fr' | 'de' | 'pt' | 'it' | 'ar' | 'zh' | 'ja' | 'ru';
+export type Language = 'es' | 'en' | 'fr' | 'de' | 'pt';
 
 export interface Translations {
     // Metadata
@@ -1413,7 +1413,7 @@ export function useTranslations(language?: Language) {
 }
 
 // Lista de idiomas soportados
-export const SUPPORTED_LANGUAGES: Language[] = ['es', 'en', 'fr', 'de', 'pt', 'it', 'ar', 'zh', 'ja', 'ru'];
+export const SUPPORTED_LANGUAGES: Language[] = ['es', 'en', 'fr', 'de', 'pt'];
 
 // Mapeo de códigos de idioma a nombres completos
 export const LANGUAGE_NAMES: Record<Language, string> = {
