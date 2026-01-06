@@ -1,7 +1,7 @@
 @echo off
 chcp 65001 > nul
 echo ========================================
-echo CORVICAC - Servidor de Desarrollo (Hardened)
+echo CORVICAC - Servidor de Produccion (Hardened)
 echo ========================================
 echo.
 
@@ -13,22 +13,12 @@ if errorlevel 1 (
     exit /b 1
 )
 
-REM Instalar dependencias si es necesario
-if not exist node_modules (
-    echo Instalando dependencias...
-    npm install
-    if errorlevel 1 (
-        echo ERROR: Fallo la instalacion
-        pause
-        exit /b 1
-    )
-)
-
 echo.
-echo INICIANDO SERVIDOR CON BINDING EXPLICITO...
+echo INICIANDO SERVIDOR DE PRODUCCION CON BINDING EXPLICITO...
 echo ========================================
 echo HOST: 0.0.0.0 (todas las interfaces)
 echo PORT: 3000
+echo MODO: Produccion (NODE_ENV=production)
 echo.
 echo El servidor escuchara en:
 echo   - http://localhost:3000
@@ -36,17 +26,17 @@ echo   - http://127.0.0.1:3000
 echo   - http://[IP-de-tu-red]:3000
 echo.
 echo IMPORTANTE: Manten esta ventana abierta
-echo Una vez que veas "ready in..." abre tu navegador
 echo ========================================
 
 cd /d "%~dp0"
 
-REM Set explicit environment variables for binding
+REM Set explicit environment variables for production binding
+set NODE_ENV=production
 set HOST=0.0.0.0
 set PORT=3000
 
-REM Run Next.js dev server with explicit port and hostname
-npm run dev
+REM Run production server
+npm run start:server
 
 if errorlevel 1 (
     echo.

@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3000 -H localhost",
+    "dev": "next dev --port 3000 --hostname 0.0.0.0",
     "build": "NODE_ENV=production next build",
     "start": "NODE_ENV=production next start",
     "lint": "eslint .",
@@ -13,7 +13,9 @@
     "build:analyze": "NODE_ENV=production ANALYZE=true next build",
     "hostinger:build": "export NODE_ENV=production && next build",
     "hostinger:deploy": "export NODE_ENV=production && next build",
-    "hardened:build": "NODE_ENV=production NEXT_DISABLE_SWC_CACHE=1 next build"
+    "hardened:build": "NODE_ENV=production NEXT_DISABLE_SWC_CACHE=1 next build",
+    "dev:server": "node server.js",
+    "start:server": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "aos": "2.3.4",
