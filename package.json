@@ -4,39 +4,46 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "set NODE_ENV=production&& next build",
-    "start": "set NODE_ENV=production&& next start",
+    "dev": "next dev --port 3000 --hostname 0.0.0.0",
+    "build": "NODE_ENV=production next build",
+    "start": "NODE_ENV=production next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
-    "build:analyze": "set NODE_ENV=production&& set ANALYZE=true&& next build",
-    "hostiger:build": "set NODE_ENV=production&& next build",
-    "hostiger:deploy": "set NODE_ENV=production&& next build"
+    "build:analyze": "NODE_ENV=production ANALYZE=true next build",
+    "hostinger:build": "export NODE_ENV=production && next build",
+    "hostinger:deploy": "export NODE_ENV=production && next build",
+    "hardened:build": "NODE_ENV=production NEXT_DISABLE_SWC_CACHE=1 next build",
+    "dev:server": "node server.js",
+    "start:server": "NODE_ENV=production node server.js"
   },
   "dependencies": {
-    "aos": "^2.3.4",
-    "framer-motion": "^11.11.12",
+    "aos": "2.3.4",
+    "framer-motion": "11.11.12",
     "next": "14.2.35",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^5.2.1",
-    "sharp": "^0.33.5"
+    "react-icons": "5.2.1",
+    "sharp": "0.33.5"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/aos": "^3.0.7",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "autoprefixer": "^10.4.20",
-    "eslint": "^8.57.0",
+    "@tailwindcss/postcss": "4.0.0",
+    "@types/aos": "3.0.7",
+    "@types/node": "20.19.0",
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.0",
+    "autoprefixer": "10.4.20",
+    "eslint": "8.57.0",
     "eslint-config-next": "14.2.35",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "tailwindcss": "4.0.0",
+    "typescript": "5.7.2"
   },
   "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
+    "node": ">=18.0.0 <22.0.0",
+    "npm": ">=8.0.0 <11.0.0"
+  },
+  "next": {
+    "swcMinify": true,
+    "output": "standalone"
   }
 }
