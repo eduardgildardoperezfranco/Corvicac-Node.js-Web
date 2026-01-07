@@ -11,3 +11,6 @@
 // export { useDebounce } from './hooks';
 // export { useResizeObserver } from './hooks';
 // export { useFocusTrap } from './hooks';
+
+// Placeholder export to make this a valid module
+export const usePlaceholder = () => {};
