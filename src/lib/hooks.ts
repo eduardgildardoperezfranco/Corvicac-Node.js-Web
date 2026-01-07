@@ -1,16 +1,12 @@
-// Hooks Export
-// Note: These hooks are not currently implemented but are exported for future use
-// export { useWindowSize } from './hooks';
-// export { useClickOutside } from './hooks';
-// export { useLocalStorage } from './hooks';
-// export { useDarkMode } from './hooks';
-// export { useIntersectionObserver } from './hooks';
-// export { useAsync } from './hooks';
-// export { useForm } from './hooks';
-// export { useThrottle } from './hooks';
-// export { useDebounce } from './hooks';
-// export { useResizeObserver } from './hooks';
-// export { useFocusTrap } from './hooks';
+/**
+ * Shared hooks module
+ * This file intentionally exports a typed placeholder
+ * to satisfy Next.js + TypeScript production builds.
+ * Real hooks can be added incrementally without breaking builds.
+ */
 
-// Placeholder export to make this a valid module
-export const usePlaceholder = () => {};
+export type PlaceholderHook = () => void;
+
+export const usePlaceholder: PlaceholderHook = () => {
+  // no-op
+};
