@@ -72,12 +72,6 @@ export const metadata: Metadata = {
     yandex: "your-yandex-verification-code",
     yahoo: "your-yahoo-verification-code",
   },
-  alternates: {
-    canonical: "https://corvicac.org",
-    languages: {
-      'es-CO': 'https://corvicac.org/es',
-    },
-  },
 };
 
 export default function RootLayout({

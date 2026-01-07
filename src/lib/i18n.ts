@@ -1,7 +1,7 @@
 // Sistema de Internacionalización (i18n) para CORVICAC
 // Soporte UTF-8 y múltiples idiomas para alcance global
 
-export type Language = 'es' | 'en' | 'fr' | 'de' | 'pt';
+export type Language = 'es' | 'en' | 'fr' | 'de' | 'pt' | 'it' | 'ar' | 'zh' | 'ja' | 'ru';
 
 export interface Translations {
     // Metadata
@@ -1358,6 +1358,1112 @@ export const translations: Record<Language, Translations> = {
             contact: "Mensagem enviada com sucesso. Entraremos em contato em breve.",
             subscription: "Inscrição bem-sucedida! Você receberá novidades no seu email."
         }
+    },
+
+    it: {
+        metadata: {
+            title: "CORVICAC - Corporation of Colombian Armed Conflict Victims",
+            description: "Non-profit organization supporting victims of the Colombian armed conflict. Justice, peace and reconciliation.",
+            keywords: "CORVICAC, victims, armed conflict, justice, peace, Colombia, human rights, forced displacement"
+        },
+        nav: {
+            home: "Home",
+            about: "About Us",
+            projects: "Projects",
+            programs: "Programs",
+            support: "Support"
+        },
+        common: {
+            donate: "Donate",
+            learnMore: "Learn More",
+            contact: "Contact",
+            back: "Back",
+            close: "Close",
+            loading: "Loading...",
+            error: "Error",
+            success: "Success",
+            warning: "Warning",
+            info: "Information",
+            currency: "COP",
+            people: "people",
+            families: "families",
+            projects: "projects",
+            programs: "programs",
+            countries: "countries",
+            years: "years",
+            months: "months",
+            days: "days",
+            hours: "hours",
+            minutes: "minutes",
+            seconds: "seconds"
+        },
+        hero: {
+            title: "Transform Lives, Transform the World",
+            subtitle: "Your Legacy Starts Here",
+            description: "Every second, 3 people lose their home due to forced displacement. But with your support, we can turn that pain into hope, that despair into dignity, and create a future where everyone has a real opportunity to prosper.",
+            ctaPrimary: "🌟 Become a Guardian Angel",
+            ctaSecondary: "📞 Free International Consultation",
+            stats: {
+                people: "8,000+",
+                projects: "150+",
+                success: "95%",
+                countries: "50+"
+            }
+        },
+        about: {
+            title: "Know Our Story",
+            mission: "Mission",
+            vision: "Vision",
+            values: "Values",
+            history: "History"
+        },
+        projects: {
+            title: "Our Transformative Projects",
+            filterByCategory: "Filter by category",
+            filterByStatus: "Filter by status",
+            status: {
+                active: "Active",
+                planned: "Planned",
+                inProgress: "In Progress",
+                atRisk: "At Risk",
+                completed: "Completed"
+            },
+            categories: {
+                justice: "Justice and Rights",
+                education: "Education",
+                economic: "Economic Development",
+                health: "Health",
+                housing: "Housing",
+                agriculture: "Agriculture"
+            },
+            projectDetails: {
+                duration: "Duration",
+                budget: "Budget",
+                beneficiaries: "Beneficiaries",
+                startDate: "Start Date",
+                endDate: "End Date",
+                impact: "Expected Impact",
+                details: "Learn About Project",
+                support: "Support"
+            }
+        },
+        programs: {
+            title: "Our Transformation Programs",
+            filterByCategory: "Filter by category",
+            filterByStatus: "Filter by status",
+            categories: {
+                justice: "Justice and Rights",
+                mentalHealth: "Mental Health",
+                economic: "Economic Development",
+                education: "Education",
+                social: "Social Inclusion",
+                rural: "Rural Development",
+                gender: "Gender and Equity",
+                youth: "Youth"
+            },
+            programDetails: {
+                duration: "Duration",
+                monthlyCost: "Monthly Cost",
+                beneficiaries: "Target Population",
+                impact: "Expected Impact",
+                costPerBeneficiary: "Cost per Beneficiary",
+                knowProgram: "Learn About Program",
+                support: "Support"
+            }
+        },
+        support: {
+            hero: {
+                title: "Transform Lives, Transform the World",
+                subtitle: "Your Legacy Starts Here",
+                description: "Every second, 3 people lose their home due to forced displacement. But with your support, we can turn that pain into hope, that despair into dignity, and create a future where everyone has a real opportunity to prosper.",
+                onlineSponsors: "Online now: 237 active sponsors",
+                ctaPrimary: "🌟 Become a Guardian Angel",
+                ctaSecondary: "📞 Free International Consultation"
+            },
+            impactStories: {
+                title: "Stories That Move, Results That Transform",
+                description: "These are not just statistics, they are real lives that changed forever",
+                before: "Before",
+                after: "After"
+            },
+            internationalCertification: {
+                title: "International Tax Certification System",
+                description: "Maximize your tax benefits in any country in the world. Our international certification system guarantees you real savings and legal compliance in more than 50 countries.",
+                selectCountry: "Select Your Country",
+                taxDeduction: "Estimated Tax Deduction",
+                certificationType: "Certification Type",
+                legalFramework: "Legal Framework",
+                processingTime: "Processing Time",
+                benefits: {
+                    global: "Global Coverage - Without borders",
+                    premium: "Premium Consulting - Personalized",
+                    legal: "Legal Documentation - Complete and certified",
+                    fast: "Fast Processing - 24-72 hours"
+                }
+            },
+            sponsorshipTiers: {
+                title: "Choose Your Transformative Impact Level",
+                description: "Each level is designed to maximize your satisfaction, recognition and tax benefits",
+                psychologicalTriggers: "Psychological Triggers",
+                certificationLevel: "Certification"
+            },
+            form: {
+                title: "Prefer a Custom Plan?",
+                description: "Complete the form and receive a free international tax consultation. Our team will help you maximize your benefits and create an impact plan tailored to your needs.",
+                fullName: "Full Name *",
+                company: "Company/Organization",
+                email: "Email Address *",
+                phone: "Phone Number *",
+                taxId: "Tax Identification Number *",
+                address: "Complete Fiscal Address *",
+                country: "Country of Fiscal Residence *",
+                amount: "Sponsorship Amount (COP)",
+                message: "Specific Message or Project of Interest",
+                submit: "🚀 Send Premium Sponsorship Request",
+                freeConsultation: "📞 Request Free Consultation",
+                summary: {
+                    title: "Tax Benefits Summary",
+                    amount: "Sponsored Amount:",
+                    savings: "Estimated Tax Savings:",
+                    effectiveCost: "Effective Cost:",
+                    rate: "Deduction Rate:"
+                }
+            },
+            testimonials: {
+                title: "Voices of Our International Allies",
+                description: "What those who have already transformed their lives sponsoring with CORVICAC say"
+            },
+            finalCta: {
+                title: "The Time is Now",
+                description: "Don't wait for others to transform the world. Join our exclusive network of international philanthropists and become the protagonist of stories of overcoming, dignity and hope that transcend borders.",
+                urgency: "LAST 24 HOURS! - 15% additional tax benefits",
+                express: "Express Processing - 24-48 hours",
+                global: "Global Coverage - 50+ countries",
+                premium: "Premium Consulting - No additional cost",
+                disclaimer: "*Limited time offer. Tax certification subject to legal requirements of each country. Real savings depend on local tax legislation."
+            }
+        },
+        footer: {
+            contact: "Contact",
+            address: "Address",
+            phone: "Phone",
+            email: "Email",
+            social: "Social Media",
+            newsletter: "Newsletter",
+            subscribe: "Subscribe",
+            copyright: "Copyright"
+        },
+        aria: {
+            skipToContent: "Skip to content",
+            mainNavigation: "Main navigation",
+            mobileMenu: "Mobile menu",
+            openMenu: "Open menu",
+            closeMenu: "Close menu",
+            image: "Image",
+            video: "Video",
+            audio: "Audio"
+        },
+        errors: {
+            general: "An error occurred. Please try again.",
+            notFound: "Page not found",
+            network: "Network error. Please check your connection.",
+            validation: {
+                required: "This field is required",
+                email: "Please enter a valid email address",
+                phone: "Please enter a valid phone number",
+                amount: "Please enter a valid amount",
+                minAmount: "Minimum amount is $5,000,000 COP"
+            }
+        },
+        success: {
+            donation: "Thank you for your donation! An advisor will contact you soon.",
+            contact: "Message sent successfully. We will contact you soon.",
+            subscription: "Subscription successful! You will receive updates in your email."
+        }
+    },
+    ar: {
+        metadata: {
+            title: "CORVICAC - Corporation of Colombian Armed Conflict Victims",
+            description: "Non-profit organization supporting victims of the Colombian armed conflict. Justice, peace and reconciliation.",
+            keywords: "CORVICAC, victims, armed conflict, justice, peace, Colombia, human rights, forced displacement"
+        },
+        nav: {
+            home: "Home",
+            about: "About Us",
+            projects: "Projects",
+            programs: "Programs",
+            support: "Support"
+        },
+        common: {
+            donate: "Donate",
+            learnMore: "Learn More",
+            contact: "Contact",
+            back: "Back",
+            close: "Close",
+            loading: "Loading...",
+            error: "Error",
+            success: "Success",
+            warning: "Warning",
+            info: "Information",
+            currency: "COP",
+            people: "people",
+            families: "families",
+            projects: "projects",
+            programs: "programs",
+            countries: "countries",
+            years: "years",
+            months: "months",
+            days: "days",
+            hours: "hours",
+            minutes: "minutes",
+            seconds: "seconds"
+        },
+        hero: {
+            title: "Transform Lives, Transform the World",
+            subtitle: "Your Legacy Starts Here",
+            description: "Every second, 3 people lose their home due to forced displacement. But with your support, we can turn that pain into hope, that despair into dignity, and create a future where everyone has a real opportunity to prosper.",
+            ctaPrimary: "🌟 Become a Guardian Angel",
+            ctaSecondary: "📞 Free International Consultation",
+            stats: {
+                people: "8,000+",
+                projects: "150+",
+                success: "95%",
+                countries: "50+"
+            }
+        },
+        about: {
+            title: "Know Our Story",
+            mission: "Mission",
+            vision: "Vision",
+            values: "Values",
+            history: "History"
+        },
+        projects: {
+            title: "Our Transformative Projects",
+            filterByCategory: "Filter by category",
+            filterByStatus: "Filter by status",
+            status: {
+                active: "Active",
+                planned: "Planned",
+                inProgress: "In Progress",
+                atRisk: "At Risk",
+                completed: "Completed"
+            },
+            categories: {
+                justice: "Justice and Rights",
+                education: "Education",
+                economic: "Economic Development",
+                health: "Health",
+                housing: "Housing",
+                agriculture: "Agriculture"
+            },
+            projectDetails: {
+                duration: "Duration",
+                budget: "Budget",
+                beneficiaries: "Beneficiaries",
+                startDate: "Start Date",
+                endDate: "End Date",
+                impact: "Expected Impact",
+                details: "Learn About Project",
+                support: "Support"
+            }
+        },
+        programs: {
+            title: "Our Transformation Programs",
+            filterByCategory: "Filter by category",
+            filterByStatus: "Filter by status",
+            categories: {
+                justice: "Justice and Rights",
+                mentalHealth: "Mental Health",
+                economic: "Economic Development",
+                education: "Education",
+                social: "Social Inclusion",
+                rural: "Rural Development",
+                gender: "Gender and Equity",
+                youth: "Youth"
+            },
+            programDetails: {
+                duration: "Duration",
+                monthlyCost: "Monthly Cost",
+                beneficiaries: "Target Population",
+                impact: "Expected Impact",
+                costPerBeneficiary: "Cost per Beneficiary",
+                knowProgram: "Learn About Program",
+                support: "Support"
+            }
+        },
+        support: {
+            hero: {
+                title: "Transform Lives, Transform the World",
+                subtitle: "Your Legacy Starts Here",
+                description: "Every second, 3 people lose their home due to forced displacement. But with your support, we can turn that pain into hope, that despair into dignity, and create a future where everyone has a real opportunity to prosper.",
+                onlineSponsors: "Online now: 237 active sponsors",
+                ctaPrimary: "🌟 Become a Guardian Angel",
+                ctaSecondary: "📞 Free International Consultation"
+            },
+            impactStories: {
+                title: "Stories That Move, Results That Transform",
+                description: "These are not just statistics, they are real lives that changed forever",
+                before: "Before",
+                after: "After"
+            },
+            internationalCertification: {
+                title: "International Tax Certification System",
+                description: "Maximize your tax benefits in any country in the world. Our international certification system guarantees you real savings and legal compliance in more than 50 countries.",
+                selectCountry: "Select Your Country",
+                taxDeduction: "Estimated Tax Deduction",
+                certificationType: "Certification Type",
+                legalFramework: "Legal Framework",
+                processingTime: "Processing Time",
+                benefits: {
+                    global: "Global Coverage - Without borders",
+                    premium: "Premium Consulting - Personalized",
+                    legal: "Legal Documentation - Complete and certified",
+                    fast: "Fast Processing - 24-72 hours"
+                }
+            },
+            sponsorshipTiers: {
+                title: "Choose Your Transformative Impact Level",
+                description: "Each level is designed to maximize your satisfaction, recognition and tax benefits",
+                psychologicalTriggers: "Psychological Triggers",
+                certificationLevel: "Certification"
+            },
+            form: {
+                title: "Prefer a Custom Plan?",
+                description: "Complete the form and receive a free international tax consultation. Our team will help you maximize your benefits and create an impact plan tailored to your needs.",
+                fullName: "Full Name *",
+                company: "Company/Organization",
+                email: "Email Address *",
+                phone: "Phone Number *",
+                taxId: "Tax Identification Number *",
+                address: "Complete Fiscal Address *",
+                country: "Country of Fiscal Residence *",
+                amount: "Sponsorship Amount (COP)",
+                message: "Specific Message or Project of Interest",
+                submit: "🚀 Send Premium Sponsorship Request",
+                freeConsultation: "📞 Request Free Consultation",
+                summary: {
+                    title: "Tax Benefits Summary",
+                    amount: "Sponsored Amount:",
+                    savings: "Estimated Tax Savings:",
+                    effectiveCost: "Effective Cost:",
+                    rate: "Deduction Rate:"
+                }
+            },
+            testimonials: {
+                title: "Voices of Our International Allies",
+                description: "What those who have already transformed their lives sponsoring with CORVICAC say"
+            },
+            finalCta: {
+                title: "The Time is Now",
+                description: "Don't wait for others to transform the world. Join our exclusive network of international philanthropists and become the protagonist of stories of overcoming, dignity and hope that transcend borders.",
+                urgency: "LAST 24 HOURS! - 15% additional tax benefits",
+                express: "Express Processing - 24-48 hours",
+                global: "Global Coverage - 50+ countries",
+                premium: "Premium Consulting - No additional cost",
+                disclaimer: "*Limited time offer. Tax certification subject to legal requirements of each country. Real savings depend on local tax legislation."
+            }
+        },
+        footer: {
+            contact: "Contact",
+            address: "Address",
+            phone: "Phone",
+            email: "Email",
+            social: "Social Media",
+            newsletter: "Newsletter",
+            subscribe: "Subscribe",
+            copyright: "Copyright"
+        },
+        aria: {
+            skipToContent: "Skip to content",
+            mainNavigation: "Main navigation",
+            mobileMenu: "Mobile menu",
+            openMenu: "Open menu",
+            closeMenu: "Close menu",
+            image: "Image",
+            video: "Video",
+            audio: "Audio"
+        },
+        errors: {
+            general: "An error occurred. Please try again.",
+            notFound: "Page not found",
+            network: "Network error. Please check your connection.",
+            validation: {
+                required: "This field is required",
+                email: "Please enter a valid email address",
+                phone: "Please enter a valid phone number",
+                amount: "Please enter a valid amount",
+                minAmount: "Minimum amount is $5,000,000 COP"
+            }
+        },
+        success: {
+            donation: "Thank you for your donation! An advisor will contact you soon.",
+            contact: "Message sent successfully. We will contact you soon.",
+            subscription: "Subscription successful! You will receive updates in your email."
+        }
+    },
+    zh: {
+        metadata: {
+            title: "CORVICAC - Corporation of Colombian Armed Conflict Victims",
+            description: "Non-profit organization supporting victims of the Colombian armed conflict. Justice, peace and reconciliation.",
+            keywords: "CORVICAC, victims, armed conflict, justice, peace, Colombia, human rights, forced displacement"
+        },
+        nav: {
+            home: "Home",
+            about: "About Us",
+            projects: "Projects",
+            programs: "Programs",
+            support: "Support"
+        },
+        common: {
+            donate: "Donate",
+            learnMore: "Learn More",
+            contact: "Contact",
+            back: "Back",
+            close: "Close",
+            loading: "Loading...",
+            error: "Error",
+            success: "Success",
+            warning: "Warning",
+            info: "Information",
+            currency: "COP",
+            people: "people",
+            families: "families",
+            projects: "projects",
+            programs: "programs",
+            countries: "countries",
+            years: "years",
+            months: "months",
+            days: "days",
+            hours: "hours",
+            minutes: "minutes",
+            seconds: "seconds"
+        },
+        hero: {
+            title: "Transform Lives, Transform the World",
+            subtitle: "Your Legacy Starts Here",
+            description: "Every second, 3 people lose their home due to forced displacement. But with your support, we can turn that pain into hope, that despair into dignity, and create a future where everyone has a real opportunity to prosper.",
+            ctaPrimary: "🌟 Become a Guardian Angel",
+            ctaSecondary: "📞 Free International Consultation",
+            stats: {
+                people: "8,000+",
+                projects: "150+",
+                success: "95%",
+                countries: "50+"
+            }
+        },
+        about: {
+            title: "Know Our Story",
+            mission: "Mission",
+            vision: "Vision",
+            values: "Values",
+            history: "History"
+        },
+        projects: {
+            title: "Our Transformative Projects",
+            filterByCategory: "Filter by category",
+            filterByStatus: "Filter by status",
+            status: {
+                active: "Active",
+                planned: "Planned",
+                inProgress: "In Progress",
+                atRisk: "At Risk",
+                completed: "Completed"
+            },
+            categories: {
+                justice: "Justice and Rights",
+                education: "Education",
+                economic: "Economic Development",
+                health: "Health",
+                housing: "Housing",
+                agriculture: "Agriculture"
+            },
+            projectDetails: {
+                duration: "Duration",
+                budget: "Budget",
+                beneficiaries: "Beneficiaries",
+                startDate: "Start Date",
+                endDate: "End Date",
+                impact: "Expected Impact",
+                details: "Learn About Project",
+                support: "Support"
+            }
+        },
+        programs: {
+            title: "Our Transformation Programs",
+            filterByCategory: "Filter by category",
+            filterByStatus: "Filter by status",
+            categories: {
+                justice: "Justice and Rights",
+                mentalHealth: "Mental Health",
+                economic: "Economic Development",
+                education: "Education",
+                social: "Social Inclusion",
+                rural: "Rural Development",
+                gender: "Gender and Equity",
+                youth: "Youth"
+            },
+            programDetails: {
+                duration: "Duration",
+                monthlyCost: "Monthly Cost",
+                beneficiaries: "Target Population",
+                impact: "Expected Impact",
+                costPerBeneficiary: "Cost per Beneficiary",
+                knowProgram: "Learn About Program",
+                support: "Support"
+            }
+        },
+        support: {
+            hero: {
+                title: "Transform Lives, Transform the World",
+                subtitle: "Your Legacy Starts Here",
+                description: "Every second, 3 people lose their home due to forced displacement. But with your support, we can turn that pain into hope, that despair into dignity, and create a future where everyone has a real opportunity to prosper.",
+                onlineSponsors: "Online now: 237 active sponsors",
+                ctaPrimary: "🌟 Become a Guardian Angel",
+                ctaSecondary: "📞 Free International Consultation"
+            },
+            impactStories: {
+                title: "Stories That Move, Results That Transform",
+                description: "These are not just statistics, they are real lives that changed forever",
+                before: "Before",
+                after: "After"
+            },
+            internationalCertification: {
+                title: "International Tax Certification System",
+                description: "Maximize your tax benefits in any country in the world. Our international certification system guarantees you real savings and legal compliance in more than 50 countries.",
+                selectCountry: "Select Your Country",
+                taxDeduction: "Estimated Tax Deduction",
+                certificationType: "Certification Type",
+                legalFramework: "Legal Framework",
+                processingTime: "Processing Time",
+                benefits: {
+                    global: "Global Coverage - Without borders",
+                    premium: "Premium Consulting - Personalized",
+                    legal: "Legal Documentation - Complete and certified",
+                    fast: "Fast Processing - 24-72 hours"
+                }
+            },
+            sponsorshipTiers: {
+                title: "Choose Your Transformative Impact Level",
+                description: "Each level is designed to maximize your satisfaction, recognition and tax benefits",
+                psychologicalTriggers: "Psychological Triggers",
+                certificationLevel: "Certification"
+            },
+            form: {
+                title: "Prefer a Custom Plan?",
+                description: "Complete the form and receive a free international tax consultation. Our team will help you maximize your benefits and create an impact plan tailored to your needs.",
+                fullName: "Full Name *",
+                company: "Company/Organization",
+                email: "Email Address *",
+                phone: "Phone Number *",
+                taxId: "Tax Identification Number *",
+                address: "Complete Fiscal Address *",
+                country: "Country of Fiscal Residence *",
+                amount: "Sponsorship Amount (COP)",
+                message: "Specific Message or Project of Interest",
+                submit: "🚀 Send Premium Sponsorship Request",
+                freeConsultation: "📞 Request Free Consultation",
+                summary: {
+                    title: "Tax Benefits Summary",
+                    amount: "Sponsored Amount:",
+                    savings: "Estimated Tax Savings:",
+                    effectiveCost: "Effective Cost:",
+                    rate: "Deduction Rate:"
+                }
+            },
+            testimonials: {
+                title: "Voices of Our International Allies",
+                description: "What those who have already transformed their lives sponsoring with CORVICAC say"
+            },
+            finalCta: {
+                title: "The Time is Now",
+                description: "Don't wait for others to transform the world. Join our exclusive network of international philanthropists and become the protagonist of stories of overcoming, dignity and hope that transcend borders.",
+                urgency: "LAST 24 HOURS! - 15% additional tax benefits",
+                express: "Express Processing - 24-48 hours",
+                global: "Global Coverage - 50+ countries",
+                premium: "Premium Consulting - No additional cost",
+                disclaimer: "*Limited time offer. Tax certification subject to legal requirements of each country. Real savings depend on local tax legislation."
+            }
+        },
+        footer: {
+            contact: "Contact",
+            address: "Address",
+            phone: "Phone",
+            email: "Email",
+            social: "Social Media",
+            newsletter: "Newsletter",
+            subscribe: "Subscribe",
+            copyright: "Copyright"
+        },
+        aria: {
+            skipToContent: "Skip to content",
+            mainNavigation: "Main navigation",
+            mobileMenu: "Mobile menu",
+            openMenu: "Open menu",
+            closeMenu: "Close menu",
+            image: "Image",
+            video: "Video",
+            audio: "Audio"
+        },
+        errors: {
+            general: "An error occurred. Please try again.",
+            notFound: "Page not found",
+            network: "Network error. Please check your connection.",
+            validation: {
+                required: "This field is required",
+                email: "Please enter a valid email address",
+                phone: "Please enter a valid phone number",
+                amount: "Please enter a valid amount",
+                minAmount: "Minimum amount is $5,000,000 COP"
+            }
+        },
+        success: {
+            donation: "Thank you for your donation! An advisor will contact you soon.",
+            contact: "Message sent successfully. We will contact you soon.",
+            subscription: "Subscription successful! You will receive updates in your email."
+        }
+    },
+    ja: {
+        metadata: {
+            title: "CORVICAC - Corporation of Colombian Armed Conflict Victims",
+            description: "Non-profit organization supporting victims of the Colombian armed conflict. Justice, peace and reconciliation.",
+            keywords: "CORVICAC, victims, armed conflict, justice, peace, Colombia, human rights, forced displacement"
+        },
+        nav: {
+            home: "Home",
+            about: "About Us",
+            projects: "Projects",
+            programs: "Programs",
+            support: "Support"
+        },
+        common: {
+            donate: "Donate",
+            learnMore: "Learn More",
+            contact: "Contact",
+            back: "Back",
+            close: "Close",
+            loading: "Loading...",
+            error: "Error",
+            success: "Success",
+            warning: "Warning",
+            info: "Information",
+            currency: "COP",
+            people: "people",
+            families: "families",
+            projects: "projects",
+            programs: "programs",
+            countries: "countries",
+            years: "years",
+            months: "months",
+            days: "days",
+            hours: "hours",
+            minutes: "minutes",
+            seconds: "seconds"
+        },
+        hero: {
+            title: "Transform Lives, Transform the World",
+            subtitle: "Your Legacy Starts Here",
+            description: "Every second, 3 people lose their home due to forced displacement. But with your support, we can turn that pain into hope, that despair into dignity, and create a future where everyone has a real opportunity to prosper.",
+            ctaPrimary: "🌟 Become a Guardian Angel",
+            ctaSecondary: "📞 Free International Consultation",
+            stats: {
+                people: "8,000+",
+                projects: "150+",
+                success: "95%",
+                countries: "50+"
+            }
+        },
+        about: {
+            title: "Know Our Story",
+            mission: "Mission",
+            vision: "Vision",
+            values: "Values",
+            history: "History"
+        },
+        projects: {
+            title: "Our Transformative Projects",
+            filterByCategory: "Filter by category",
+            filterByStatus: "Filter by status",
+            status: {
+                active: "Active",
+                planned: "Planned",
+                inProgress: "In Progress",
+                atRisk: "At Risk",
+                completed: "Completed"
+            },
+            categories: {
+                justice: "Justice and Rights",
+                education: "Education",
+                economic: "Economic Development",
+                health: "Health",
+                housing: "Housing",
+                agriculture: "Agriculture"
+            },
+            projectDetails: {
+                duration: "Duration",
+                budget: "Budget",
+                beneficiaries: "Beneficiaries",
+                startDate: "Start Date",
+                endDate: "End Date",
+                impact: "Expected Impact",
+                details: "Learn About Project",
+                support: "Support"
+            }
+        },
+        programs: {
+            title: "Our Transformation Programs",
+            filterByCategory: "Filter by category",
+            filterByStatus: "Filter by status",
+            categories: {
+                justice: "Justice and Rights",
+                mentalHealth: "Mental Health",
+                economic: "Economic Development",
+                education: "Education",
+                social: "Social Inclusion",
+                rural: "Rural Development",
+                gender: "Gender and Equity",
+                youth: "Youth"
+            },
+            programDetails: {
+                duration: "Duration",
+                monthlyCost: "Monthly Cost",
+                beneficiaries: "Target Population",
+                impact: "Expected Impact",
+                costPerBeneficiary: "Cost per Beneficiary",
+                knowProgram: "Learn About Program",
+                support: "Support"
+            }
+        },
+        support: {
+            hero: {
+                title: "Transform Lives, Transform the World",
+                subtitle: "Your Legacy Starts Here",
+                description: "Every second, 3 people lose their home due to forced displacement. But with your support, we can turn that pain into hope, that despair into dignity, and create a future where everyone has a real opportunity to prosper.",
+                onlineSponsors: "Online now: 237 active sponsors",
+                ctaPrimary: "🌟 Become a Guardian Angel",
+                ctaSecondary: "📞 Free International Consultation"
+            },
+            impactStories: {
+                title: "Stories That Move, Results That Transform",
+                description: "These are not just statistics, they are real lives that changed forever",
+                before: "Before",
+                after: "After"
+            },
+            internationalCertification: {
+                title: "International Tax Certification System",
+                description: "Maximize your tax benefits in any country in the world. Our international certification system guarantees you real savings and legal compliance in more than 50 countries.",
+                selectCountry: "Select Your Country",
+                taxDeduction: "Estimated Tax Deduction",
+                certificationType: "Certification Type",
+                legalFramework: "Legal Framework",
+                processingTime: "Processing Time",
+                benefits: {
+                    global: "Global Coverage - Without borders",
+                    premium: "Premium Consulting - Personalized",
+                    legal: "Legal Documentation - Complete and certified",
+                    fast: "Fast Processing - 24-72 hours"
+                }
+            },
+            sponsorshipTiers: {
+                title: "Choose Your Transformative Impact Level",
+                description: "Each level is designed to maximize your satisfaction, recognition and tax benefits",
+                psychologicalTriggers: "Psychological Triggers",
+                certificationLevel: "Certification"
+            },
+            form: {
+                title: "Prefer a Custom Plan?",
+                description: "Complete the form and receive a free international tax consultation. Our team will help you maximize your benefits and create an impact plan tailored to your needs.",
+                fullName: "Full Name *",
+                company: "Company/Organization",
+                email: "Email Address *",
+                phone: "Phone Number *",
+                taxId: "Tax Identification Number *",
+                address: "Complete Fiscal Address *",
+                country: "Country of Fiscal Residence *",
+                amount: "Sponsorship Amount (COP)",
+                message: "Specific Message or Project of Interest",
+                submit: "🚀 Send Premium Sponsorship Request",
+                freeConsultation: "📞 Request Free Consultation",
+                summary: {
+                    title: "Tax Benefits Summary",
+                    amount: "Sponsored Amount:",
+                    savings: "Estimated Tax Savings:",
+                    effectiveCost: "Effective Cost:",
+                    rate: "Deduction Rate:"
+                }
+            },
+            testimonials: {
+                title: "Voices of Our International Allies",
+                description: "What those who have already transformed their lives sponsoring with CORVICAC say"
+            },
+            finalCta: {
+                title: "The Time is Now",
+                description: "Don't wait for others to transform the world. Join our exclusive network of international philanthropists and become the protagonist of stories of overcoming, dignity and hope that transcend borders.",
+                urgency: "LAST 24 HOURS! - 15% additional tax benefits",
+                express: "Express Processing - 24-48 hours",
+                global: "Global Coverage - 50+ countries",
+                premium: "Premium Consulting - No additional cost",
+                disclaimer: "*Limited time offer. Tax certification subject to legal requirements of each country. Real savings depend on local tax legislation."
+            }
+        },
+        footer: {
+            contact: "Contact",
+            address: "Address",
+            phone: "Phone",
+            email: "Email",
+            social: "Social Media",
+            newsletter: "Newsletter",
+            subscribe: "Subscribe",
+            copyright: "Copyright"
+        },
+        aria: {
+            skipToContent: "Skip to content",
+            mainNavigation: "Main navigation",
+            mobileMenu: "Mobile menu",
+            openMenu: "Open menu",
+            closeMenu: "Close menu",
+            image: "Image",
+            video: "Video",
+            audio: "Audio"
+        },
+        errors: {
+            general: "An error occurred. Please try again.",
+            notFound: "Page not found",
+            network: "Network error. Please check your connection.",
+            validation: {
+                required: "This field is required",
+                email: "Please enter a valid email address",
+                phone: "Please enter a valid phone number",
+                amount: "Please enter a valid amount",
+                minAmount: "Minimum amount is $5,000,000 COP"
+            }
+        },
+        success: {
+            donation: "Thank you for your donation! An advisor will contact you soon.",
+            contact: "Message sent successfully. We will contact you soon.",
+            subscription: "Subscription successful! You will receive updates in your email."
+        }
+    },
+    ru: {
+        metadata: {
+            title: "CORVICAC - Corporation of Colombian Armed Conflict Victims",
+            description: "Non-profit organization supporting victims of the Colombian armed conflict. Justice, peace and reconciliation.",
+            keywords: "CORVICAC, victims, armed conflict, justice, peace, Colombia, human rights, forced displacement"
+        },
+        nav: {
+            home: "Home",
+            about: "About Us",
+            projects: "Projects",
+            programs: "Programs",
+            support: "Support"
+        },
+        common: {
+            donate: "Donate",
+            learnMore: "Learn More",
+            contact: "Contact",
+            back: "Back",
+            close: "Close",
+            loading: "Loading...",
+            error: "Error",
+            success: "Success",
+            warning: "Warning",
+            info: "Information",
+            currency: "COP",
+            people: "people",
+            families: "families",
+            projects: "projects",
+            programs: "programs",
+            countries: "countries",
+            years: "years",
+            months: "months",
+            days: "days",
+            hours: "hours",
+            minutes: "minutes",
+            seconds: "seconds"
+        },
+        hero: {
+            title: "Transform Lives, Transform the World",
+            subtitle: "Your Legacy Starts Here",
+            description: "Every second, 3 people lose their home due to forced displacement. But with your support, we can turn that pain into hope, that despair into dignity, and create a future where everyone has a real opportunity to prosper.",
+            ctaPrimary: "🌟 Become a Guardian Angel",
+            ctaSecondary: "📞 Free International Consultation",
+            stats: {
+                people: "8,000+",
+                projects: "150+",
+                success: "95%",
+                countries: "50+"
+            }
+        },
+        about: {
+            title: "Know Our Story",
+            mission: "Mission",
+            vision: "Vision",
+            values: "Values",
+            history: "History"
+        },
+        projects: {
+            title: "Our Transformative Projects",
+            filterByCategory: "Filter by category",
+            filterByStatus: "Filter by status",
+            status: {
+                active: "Active",
+                planned: "Planned",
+                inProgress: "In Progress",
+                atRisk: "At Risk",
+                completed: "Completed"
+            },
+            categories: {
+                justice: "Justice and Rights",
+                education: "Education",
+                economic: "Economic Development",
+                health: "Health",
+                housing: "Housing",
+                agriculture: "Agriculture"
+            },
+            projectDetails: {
+                duration: "Duration",
+                budget: "Budget",
+                beneficiaries: "Beneficiaries",
+                startDate: "Start Date",
+                endDate: "End Date",
+                impact: "Expected Impact",
+                details: "Learn About Project",
+                support: "Support"
+            }
+        },
+        programs: {
+            title: "Our Transformation Programs",
+            filterByCategory: "Filter by category",
+            filterByStatus: "Filter by status",
+            categories: {
+                justice: "Justice and Rights",
+                mentalHealth: "Mental Health",
+                economic: "Economic Development",
+                education: "Education",
+                social: "Social Inclusion",
+                rural: "Rural Development",
+                gender: "Gender and Equity",
+                youth: "Youth"
+            },
+            programDetails: {
+                duration: "Duration",
+                monthlyCost: "Monthly Cost",
+                beneficiaries: "Target Population",
+                impact: "Expected Impact",
+                costPerBeneficiary: "Cost per Beneficiary",
+                knowProgram: "Learn About Program",
+                support: "Support"
+            }
+        },
+        support: {
+            hero: {
+                title: "Transform Lives, Transform the World",
+                subtitle: "Your Legacy Starts Here",
+                description: "Every second, 3 people lose their home due to forced displacement. But with your support, we can turn that pain into hope, that despair into dignity, and create a future where everyone has a real opportunity to prosper.",
+                onlineSponsors: "Online now: 237 active sponsors",
+                ctaPrimary: "🌟 Become a Guardian Angel",
+                ctaSecondary: "📞 Free International Consultation"
+            },
+            impactStories: {
+                title: "Stories That Move, Results That Transform",
+                description: "These are not just statistics, they are real lives that changed forever",
+                before: "Before",
+                after: "After"
+            },
+            internationalCertification: {
+                title: "International Tax Certification System",
+                description: "Maximize your tax benefits in any country in the world. Our international certification system guarantees you real savings and legal compliance in more than 50 countries.",
+                selectCountry: "Select Your Country",
+                taxDeduction: "Estimated Tax Deduction",
+                certificationType: "Certification Type",
+                legalFramework: "Legal Framework",
+                processingTime: "Processing Time",
+                benefits: {
+                    global: "Global Coverage - Without borders",
+                    premium: "Premium Consulting - Personalized",
+                    legal: "Legal Documentation - Complete and certified",
+                    fast: "Fast Processing - 24-72 hours"
+                }
+            },
+            sponsorshipTiers: {
+                title: "Choose Your Transformative Impact Level",
+                description: "Each level is designed to maximize your satisfaction, recognition and tax benefits",
+                psychologicalTriggers: "Psychological Triggers",
+                certificationLevel: "Certification"
+            },
+            form: {
+                title: "Prefer a Custom Plan?",
+                description: "Complete the form and receive a free international tax consultation. Our team will help you maximize your benefits and create an impact plan tailored to your needs.",
+                fullName: "Full Name *",
+                company: "Company/Organization",
+                email: "Email Address *",
+                phone: "Phone Number *",
+                taxId: "Tax Identification Number *",
+                address: "Complete Fiscal Address *",
+                country: "Country of Fiscal Residence *",
+                amount: "Sponsorship Amount (COP)",
+                message: "Specific Message or Project of Interest",
+                submit: "🚀 Send Premium Sponsorship Request",
+                freeConsultation: "📞 Request Free Consultation",
+                summary: {
+                    title: "Tax Benefits Summary",
+                    amount: "Sponsored Amount:",
+                    savings: "Estimated Tax Savings:",
+                    effectiveCost: "Effective Cost:",
+                    rate: "Deduction Rate:"
+                }
+            },
+            testimonials: {
+                title: "Voices of Our International Allies",
+                description: "What those who have already transformed their lives sponsoring with CORVICAC say"
+            },
+            finalCta: {
+                title: "The Time is Now",
+                description: "Don't wait for others to transform the world. Join our exclusive network of international philanthropists and become the protagonist of stories of overcoming, dignity and hope that transcend borders.",
+                urgency: "LAST 24 HOURS! - 15% additional tax benefits",
+                express: "Express Processing - 24-48 hours",
+                global: "Global Coverage - 50+ countries",
+                premium: "Premium Consulting - No additional cost",
+                disclaimer: "*Limited time offer. Tax certification subject to legal requirements of each country. Real savings depend on local tax legislation."
+            }
+        },
+        footer: {
+            contact: "Contact",
+            address: "Address",
+            phone: "Phone",
+            email: "Email",
+            social: "Social Media",
+            newsletter: "Newsletter",
+            subscribe: "Subscribe",
+            copyright: "Copyright"
+        },
+        aria: {
+            skipToContent: "Skip to content",
+            mainNavigation: "Main navigation",
+            mobileMenu: "Mobile menu",
+            openMenu: "Open menu",
+            closeMenu: "Close menu",
+            image: "Image",
+            video: "Video",
+            audio: "Audio"
+        },
+        errors: {
+            general: "An error occurred. Please try again.",
+            notFound: "Page not found",
+            network: "Network error. Please check your connection.",
+            validation: {
+                required: "This field is required",
+                email: "Please enter a valid email address",
+                phone: "Please enter a valid phone number",
+                amount: "Please enter a valid amount",
+                minAmount: "Minimum amount is $5,000,000 COP"
+            }
+        },
+        success: {
+            donation: "Thank you for your donation! An advisor will contact you soon.",
+            contact: "Message sent successfully. We will contact you soon.",
+            subscription: "Subscription successful! You will receive updates in your email."
+        }
     }
 };
 
@@ -1541,6 +2647,20 @@ export function sanitizeUTF8(text: string): string {
         return text.replace(/[^\u0000-\uFFFF]/g, '?');
     }
     return text;
+}
+
+export function generateAlternates(currentLang: Language, currentPath: string): { canonical: string; languages: Record<string, string> } {
+    const alternates: Record<string, string> = {};
+    for (const lang of SUPPORTED_LANGUAGES) {
+        if (lang !== currentLang) {
+            alternates[lang] = currentPath.replace(`/${currentLang}`, `/${lang}`);
+        }
+    }
+
+    return {
+        canonical: currentPath,
+        languages: alternates,
+    };
 }
 
 // Exportación por defecto para compatibilidad
