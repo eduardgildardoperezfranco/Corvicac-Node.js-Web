@@ -147,7 +147,7 @@ export default function Footer() {
                                 </svg>
                                 Síguenos
                             </h4>
-                            <div className="flex gap-4 mb-6">
+                            <div className="flex flex-wrap gap-4 mb-6">
                                 {/* Facebook */}
                                 <a
                                     href="https://www.facebook.com/CORVICAC"

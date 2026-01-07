@@ -120,7 +120,7 @@ export default function Home() {
             </div>
 
             {/* Enhanced Trust indicators with Real-time Stats */}
-            <div className="flex items-center gap-6 pt-4">
+            <div className="flex flex-wrap items-center gap-6 pt-4">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <div

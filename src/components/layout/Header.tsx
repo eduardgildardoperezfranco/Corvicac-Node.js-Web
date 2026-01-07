@@ -43,7 +43,7 @@ export default function Header() {
                 </Link>
 
                 <nav className="hidden md:flex items-center justify-center flex-1" role="navigation" aria-label="Menú de navegación">
-                    <div className="flex gap-6">
+                    <div className="flex flex-wrap gap-6">
                         <Link
                             href="/"
                             className="text-sm font-medium text-[var(--color-primary-black)] hover:text-[var(--color-flag-yellow)] transition-colors"

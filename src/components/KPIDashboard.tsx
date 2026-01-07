@@ -190,7 +190,7 @@ export default function KPIDashboard() {
                     <p className="text-gray-600">Métricas en tiempo real de nuestra transformación social</p>
                 </div>
 
-                <div className="flex gap-2">
+                <div className="flex flex-wrap gap-2">
                     {['week', 'month', 'year'].map(range => (
                         <button
                             key={range}
@@ -227,7 +227,7 @@ export default function KPIDashboard() {
                         ></div>
                     </div>
 
-                    <div className="flex gap-2 mt-4">
+                    <div className="flex flex-wrap gap-2 mt-4">
                         {userStats.badges.map((badge, index) => (
                             <span key={index} className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-white/20">
                                 {badge}

@@ -210,7 +210,7 @@ export default function CommunityEngagement() {
 
             {user && (
                 <div className="bg-gray-50 rounded-lg p-4 mb-4">
-                    <div className="flex items-center justify-between">
+                    <div className="flex flex-wrap items-center justify-between">
                         <div>
                             <span className="font-medium text-gray-900">{user.name}</span>
                             <span className={`ml-2 text-sm ${getLevelColor(user.level)}`}>• {user.level}</span>
@@ -251,7 +251,7 @@ export default function CommunityEngagement() {
                     </div>
                 </div>
 
-                <div className="flex gap-3">
+                <div className="flex flex-wrap gap-3">
                     <button
                         type="submit"
                         disabled={isSubmitting || newComment.trim().length < 10}
@@ -284,7 +284,7 @@ export default function CommunityEngagement() {
                 ) : (
                     comments.slice(0, 5).map((comment) => (
                         <div key={comment.id} className="bg-gray-50 rounded-lg p-4">
-                            <div className="flex items-center justify-between mb-2">
+                            <div className="flex flex-wrap items-center justify-between mb-2">
                                 <div className="flex items-center gap-2">
                                     <span className="font-medium text-gray-900">{comment.author}</span>
                                     {comment.isVerified && (
