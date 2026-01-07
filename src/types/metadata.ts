@@ -1,5 +1,4 @@
 // Tipos estrictos para metadatos de Next.js
-import { OpenGraph, Twitter } from 'next';
 
 // Tipo para OpenGraph con valores literales
 export type StrictOpenGraph = {
