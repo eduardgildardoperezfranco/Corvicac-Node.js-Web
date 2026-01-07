@@ -61,13 +61,11 @@ Aplicación web moderna para CORVICAC (Corporación de Afrocolombianos y Mestizo
    ```
 
 3. **Configurar variables de entorno:**
-   Crea un archivo `.env.local` en la raíz del proyecto:
-   ```env
-   NEXT_PUBLIC_API_URL=https://api.corvicac.org
-   NEXT_PUBLIC_GA_ID=GA_MEASUREMENT_ID
-   NEXT_PUBLIC_DONATIONS_ENABLED=true
-   NEXT_PUBLIC_VOLUNTEERS_ENABLED=true
+   Copia el archivo `.env.example` a `.env.local` y completa las variables para tu entorno de desarrollo.
+   ```bash
+   cp .env.example .env.local
    ```
+   Este archivo `.env.local` es para desarrollo y no debe ser subido a control de versiones.
 
 4. **Iniciar el servidor de desarrollo (métodos disponibles):**
    
@@ -217,34 +215,25 @@ El proyecto incluye configuración SEO avanzada:
 - Tamaños de fuente accesibles
 - Soporte para lectores de pantalla
 
-## 🚀 Despliegue
+## 🚀 Environment Variables and Deployment
 
-### Hostiger (Recomendado)
-1. **Requisitos:** Node.js 18+, npm 8+
-2. **Comandos:**
-   ```bash
-   npm run hostiger:build
-   npm run hostiger:deploy
-   ```
-3. **Configuración:** Ver [HOSTIGER_SETUP.md](./HOSTIGER_SETUP.md)
+### Environment Variables
+This project uses environment variables for configuration.
 
-### Vercel
-1. Conecta tu proyecto a GitHub
-2. Importa en Vercel
-3. Configura variables de entorno
-4. Despliega
+- **Development**: For local development, copy the `.env.example` file to `.env.local` (`cp .env.example .env.local`). This file is ignored by Git and is where you should place your local development keys and settings.
 
-### Docker
-```bash
-# Construir imagen
-docker build -t corvicac-web .
+- **Production**: For production, you must set the environment variables directly on your hosting provider. All required variables are listed in `.env.example`. **Do not** use a `.env.local` file in production.
 
-# Iniciar contenedor
-docker run -p 3000:3000 corvicac-web
+### Deployment
+A comprehensive guide for deploying this application to a production environment on **Hostinger** is available. This guide covers everything from initial setup to ongoing maintenance.
 
-# Con docker-compose
-docker-compose up -d
-```
+**➡️ [View the Production Deployment Guide](./HOSTINGER_DEPLOYMENT.md)**
+
+For other platforms like Vercel or Docker, you can adapt the principles from the Hostinger guide, focusing on:
+1.  Setting the production environment variables.
+2.  Running `npm ci --only=production`.
+3.  Running `npm run build`.
+4.  Running the application using `npm run start:server` or the `ecosystem.config.js` with PM2.
 
 ### Otros Providers
 - **Netlify:** Soporta Next.js 13+

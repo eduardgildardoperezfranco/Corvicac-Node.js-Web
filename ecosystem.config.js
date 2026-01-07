@@ -38,9 +38,9 @@ module.exports = {
       instance_var: 'INSTANCE_ID',
       
       // Logging
-      log_file: '/var/log/corvicac/web.stdout.log',
-      out_file: '/var/log/corvicac/web.stdout.log',
-      error_file: '/var/log/corvicac/web.stderr.log',
+      log_file: './logs/web.stdout.log',
+      out_file: './logs/web.stdout.log',
+      error_file: './logs/web.stderr.log',
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
       merge_logs: true,
       
@@ -61,7 +61,7 @@ module.exports = {
       
       // Health check
       healthcheck: {
-        http_get: 'http://localhost:3000/_health',
+        http_get: 'http://localhost:3000/api/health',
         interval: 30000,
         timeout: 5000,
         retries: 3,
