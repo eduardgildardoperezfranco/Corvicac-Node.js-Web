@@ -42,7 +42,7 @@ export default function NotFound() {
                             onClick={() => router.push('/')}
                             className="bg-white text-[var(--color-primary-green)] hover:bg-gray-100"
                         >
-                            ← {(t('common') as any).back} {(t('nav') as any).home}
+                            ← {(t('common') as Record<string, string>).back} {(t('nav') as Record<string, string>).home}
                         </Button>
                         
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -51,7 +51,7 @@ export default function NotFound() {
                                 onClick={() => router.push('/nosotros')}
                                 className="text-white border-white hover:bg-white hover:text-[var(--color-primary-green)]"
                             >
-                                {(t('nav') as any).about}
+                                {(t('nav') as Record<string, string>).about}
                             </Button>
                             
                             <Button
@@ -59,7 +59,7 @@ export default function NotFound() {
                                 onClick={() => router.push('/programas')}
                                 className="text-white border-white hover:bg-white hover:text-[var(--color-primary-green)]"
                             >
-                                {(t('nav') as any).programs}
+                                {(t('nav') as Record<string, string>).programs}
                             </Button>
                             
                             <Button
@@ -67,14 +67,14 @@ export default function NotFound() {
                                 onClick={() => router.push('/apoyar')}
                                 className="text-white border-white hover:bg-white hover:text-[var(--color-primary-green)]"
                             >
-                                {(t('nav') as any).support}
+                                {(t('nav') as Record<string, string>).support}
                             </Button>
                         </div>
                     </div>
                     
                     <div className="mt-12 text-white/70">
                         <p className="text-sm">
-                            ¿Necesitas ayuda? {(t('common') as any).contact} {(t('common') as any).contact}
+                            ¿Necesitas ayuda? {(t('common') as Record<string, string>).contact} {(t('common') as Record<string, string>).contact}
                         </p>
                     </div>
                 </div>

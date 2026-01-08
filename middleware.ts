@@ -119,7 +119,6 @@ export function middleware(request: NextRequest) {
     }
 
     // Check if user has a preferred language different from current
-    const preferredLang = getPreferredLanguage(request);
     const savedLang = request.cookies.get('preferred-language')?.value;
     
     if (savedLang && savedLang !== currentLang && SUPPORTED_LANGUAGES.includes(savedLang)) {
