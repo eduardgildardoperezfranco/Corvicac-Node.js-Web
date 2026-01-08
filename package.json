@@ -12,7 +12,7 @@
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
     "build:analyze": "NODE_ENV=production ANALYZE=true next build",
-    "hostinger:build": "next build",
+    "hostinger:build": "npm install && next build",
     "hostinger:deploy": "export NODE_ENV=production && next build",
     "hardened:build": "NODE_ENV=production NEXT_DISABLE_SWC_CACHE=1 next build",
     "dev:server": "node server.js",
