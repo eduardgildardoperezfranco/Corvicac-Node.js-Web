@@ -56,5 +56,8 @@
   "next": {
     "swcMinify": true,
     "output": "standalone"
-  }
+  },
+  "bundleDependencies": [
+    "@tailwindcss/postcss"
+  ]
 }
